@@ -1,0 +1,212 @@
+.intro {
+    position: relative;
+    top: 7vmin;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    vertical-align: middle;
+    border-radius: 5vmin;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.location {
+    padding: 0.5vw;
+    position: absolute;
+    bottom: 0.3vw;
+    right: 0.3vw;
+    color: white;
+    background-color: black;
+    font-size: 1.2vw;
+    opacity: 0.6;
+    font-family: Advent Pro;
+}
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+    font-size: 2.8vw;
+    opacity: 1;
+    font-family: Advent Pro;
+}
+
+.text1 mark,
+.text2 mark,
+.text3 mark,
+.text4 mark,
+.text5 mark {
+    background-color: #ffcc005b;
+    color: rgb(255, 255, 255);
+}
+
+.text1 {
+    padding: 0.8vw;
+    position: absolute;
+    top: 3vw;
+    left: 4vw;
+    width: 35vw;
+    text-align: center;
+}
+
+.text2 {
+    padding: 0.8vw;
+    position: absolute;
+    bottom: 3vw;
+    width: 100%;
+    text-align: center;
+}
+
+.text3 {
+    padding: 0.8vw;
+    position: absolute;
+    left: 6vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25vw;
+    text-align: center;
+}
+
+.text4 {
+    padding: 0.8vw;
+    position: absolute;
+    top: 2vw;
+    width: 100%;
+    text-align: center;
+}
+
+.text5 {
+    padding: 0.8vw;
+    position: absolute;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    text-align: center;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #000000;
+    font-size: 1.2vw;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    font-family: Advent Pro;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 0.7vw;
+    width: 0.7vw;
+    margin: 1vw 0.2vw;
+    margin-top: 5vmin;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #ffca00;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 360px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+    .prev:hover,
+    .next:hover {
+        background: none;
+    }
+}

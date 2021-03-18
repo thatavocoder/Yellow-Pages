@@ -1,0 +1,31 @@
+.brand-logo {
+    margin-left: 3vmin;
+    font-weight: bold;
+}
+
+nav {
+    height: 13vmin;
+    line-height: 13vmin;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    background-color: #ffca00;
+    border-bottom: 0.3vmin solid black;
+}
+
+.menu-list li a {
+    color: rgb(0, 0, 0);
+}
+
+.active {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 414px) {
+    .brand-logo {
+        font-size: 10vmin;
+    }
+}

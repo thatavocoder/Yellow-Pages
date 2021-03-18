@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <link href="CSS/index.css" rel="stylesheet">
+    <link href="CSS/navbar.css" rel="stylesheet">
+    <link href="CSS/slideshow.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <title>Yellow Pages</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">
+               Yellow Pages
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down menu-list">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Diagnostics</a></li>
+                <li><a href="#">Hospitals</a></li>
+                <li><a href="#">Medicines</a></li>
+                <li><a href="#">Epuipments</a></li>
+                <li><a href="#">After-treatment</a></li>
+                <li><a href="#">Q&A</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Diagnostics</a></li>
+        <li><a href="#">Hospitals</a></li>
+        <li><a href="#">Medicines</a></li>
+        <li><a href="#">Epuipments</a></li>
+        <li><a href="#">After-treatment</a></li>
+        <li><a href="#">Q&A</a></li>
+    </ul>
+
+    <div class="row intro-container">
+        <div class="col l4 m6 s12 offset-l1 intro-text ">
+            <p class="flow-text intro-head">Lorem, ipsum dolor sit amet</p>
+            <p class="flow-text intro-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ullam, praesentium et quas facilis ipsum odit odio porro nobis nemo quisquam, alias qui, atque sed labore maiores asperiores perspiciatis exercitationem.</p>
+            <br>
+            <a class="waves-effect waves-light btn intro-btn"><span>button</span></a>
+        </div>
+        <div class="col l6 m6 s12 offset-l1 intro-img">
+            <img src="images/Screenshot__1_-removebg-preview.png" alt="placeholder">
+        </div>
+    </div>
+
+    <div class="intro">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <a href="#"><img src="Images/travel1.jpg" style="width:100%"></a>
+                <div class="text1"><mark>Est qui velit laborum et cillum incididunt magna Lorem cillum irure.</mark></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Images/travel2.jpg" style="width:100%">
+                <div class="text2"><mark>Reprehenderit incididunt ut ex minim qui id mollit do ut commodo.</mark></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Images/travel3.jpg" style="width:100%">
+                <div class="text3"><mark>Amet minim esse ea elit dolor culpa sint elit.</mark></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Images/travel4.jpg" style="width:100%">
+                <div class="text4"><mark>Culpa ipsum qui mollit irure voluptate elit consectetur ex cupidatat proident quis ea.</mark></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Images/travel5.jpg" style="width:100%">
+                <div class="text5"><mark>Deserunt dolor dolor duis est magna mollit et eu elit cupidatat.</mark></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+    <div class="ourservices">
+        <div class="section-container">
+            <p class="section-head">Our Services</p>
+            <hr>
+            <p class="service-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iste numquam possimus nobis a saepe unde molestiae veritatis fuga eius beatae ipsum, error aspernatur quasi illum accusantium, reprehenderit sequi laborum!
+            </p>
+        </div>
+
+
+        <div class="row card-container">
+
+            <div class="col s4">
+                <!-- Promo Content 1 goes here -->
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card service-card">
+                            <div class="card-image">
+                                <img src="images/service1.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content service-card-content">
+                                <p>Occaecat duis ut aliquip in sint sit magna sit nulla id minim.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <!-- Promo Content 2 goes here -->
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card service-card">
+                            <div class="card-image">
+                                <img src="images/service2.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content service-card-content">
+                                <p>In eiusmod velit id dolore voluptate culpa cillum ullamco voluptate et nisi dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <!-- Promo Content 3 goes here -->
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card service-card">
+                            <div class="card-image">
+                                <img src="images/service3.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content service-card-content">
+                                <p>Dolore aliquip Lorem qui fugiat pariatur ullamco.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row card-container">
+
+            <div class="col s4">
+                <!-- Promo Content 1 goes here -->
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card service-card">
+                            <div class="card-image">
+                                <img src="images/service4.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content service-card-content">
+                                <p>Dolore enim eu et do deserunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <!-- Promo Content 2 goes here -->
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card service-card">
+                            <div class="card-image">
+                                <img src="images/service5.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content service-card-content">
+                                <p>Pariatur officia tempor laborum proident ad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <!-- Promo Content 3 goes here -->
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card service-card">
+                            <div class="card-image">
+                                <img src="images/service6.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content service-card-content">
+                                <p>Anim velit non ipsum laborum ad minim elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="waves-effect waves-light btn service-btn">Learn More</a>
+    </div>
+
+    <div class="testimonials">
+        <div class="section-container">
+            <p class="section-head test-head">Testimonials</p>
+            <hr class="test-line">
+        </div>
+
+        <div class="row test-card-container">
+
+            <div class="col s4">
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card test-card">
+                            <div class="card-image test-card-img">
+                                <img src="images/person.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content truncate-overflow">
+                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" class="yellow-text accent-3">Read More &nbsp;<i class="material-icons">east</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card test-card">
+                            <div class="card-image test-card-img">
+                                <img src="images/person.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content truncate-overflow">
+                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" class="yellow-text accent-3">Read More &nbsp;<i class="material-icons">east</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card test-card">
+                            <div class="card-image test-card-img">
+                                <img src="images/person.png">
+                            </div>
+                            <p class="card-head">Card Title</p>
+                            <div class="card-content truncate-overflow">
+                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" class="#ffc400 amber-text accent-3">Read More &nbsp;<i class="material-icons">east</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="waves-effect waves-light btn test-btn">View All &nbsp; <i class="material-icons">east</i></a>
+
+    </div>
+
+    <footer class="page-footer" style="background-color: #ffca00;">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="white-text foot-head">Yellow Pages</p>
+                    <p class="foot-text">
+                        <span>Don't miss a beat!</span>
+                        <br> Join our mailing list to stay in loop about our upcoming scholarships and loans.
+                    </p>
+                    <form action="#">
+                        <input type="textbox" placeholder="First Name" class="foot-form">
+                        <input type="textbox" placeholder="Last Name" class="foot-form">
+                        <input type="textbox" placeholder="Email" class="foot-form">
+                        <input type="submit" value="Join" class="foot-form-submit teal lighten-2">
+                    </form>
+
+                </div>
+                <div class="col l2 offset-l1 s6 foot-link">
+                    <h5 class="white-text">Company</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Testimonials</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Search</a></li>
+                    </ul>
+                </div>
+                <div class="col l2 offset-l1 s6 foot-link">
+                    <h5 class="white-text">Help</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Help Center</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                ©Yellowpages 2021. All rights reserved.
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/slideshow.js"></script>
+
+</body>
+
+</html>

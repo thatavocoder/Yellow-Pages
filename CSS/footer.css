@@ -1,0 +1,50 @@
+.page-footer {
+    position: relative;
+    top: 40vmin;
+}
+
+.foot-head {
+    font-size: 5vmin;
+    font-weight: bold;
+    line-height: 5vmin;
+    position: relative;
+    bottom: 3vmin;
+}
+
+.foot-text span {
+    font-size: 3vmin;
+    line-height: 3vmin;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    bottom: 1vmin;
+}
+
+.foot-text {
+    color: black;
+    position: relative;
+    bottom: 2vmin;
+}
+
+.foot-form {
+    width: 15vmin;
+    height: 5vmin;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: black;
+    margin-right: 0.7vmin;
+}
+
+.foot-form-submit {
+    height: 5vmin;
+    width: 10vmin;
+    border-radius: 5vmin;
+    outline: none;
+    border: none;
+}
+
+.foot-link {
+    position: relative;
+    top: 6vmin;
+}

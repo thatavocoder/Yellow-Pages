@@ -1,0 +1,225 @@
+.intro-container {
+    height: 80vh;
+    width: 100%;
+    background-color: #ffca00;
+}
+
+.intro-text,
+.intro-img {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.intro-img img {
+    width: 100%;
+    height: auto;
+}
+
+.intro-head {
+    font-size: 6.5vmin;
+    font-weight: bold;
+    line-height: 7vmin;
+}
+
+.intro-para {
+    font-size: 2.7vmin;
+    color: rgb(100, 100, 100);
+    position: relative;
+    bottom: 2vmin;
+}
+
+.intro-btn {
+    width: 25vmin;
+    height: 7vmin;
+    line-height: 7vmin;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-bottom-left-radius: 20vmin;
+    border-top-left-radius: 20vmin;
+    border-bottom-right-radius: 20vmin;
+    border-top-right-radius: 20vmin;
+    position: relative;
+    bottom: 3vmin;
+}
+
+.section-head {
+    text-align: center;
+    position: relative;
+    top: 10vmin;
+    font-size: 5vmin;
+    font-weight: bold;
+}
+
+hr {
+    position: relative;
+    top: 8vmin;
+    height: 0.3vmin;
+    width: 5%;
+    border-width: 0;
+    color: black;
+    background-color: black
+}
+
+.service-text {
+    text-align: center;
+    width: 70%;
+    position: relative;
+    top: 11vmin;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgb(100, 100, 100);
+}
+
+.card-container {
+    width: 75%;
+    position: relative;
+    top: 15vmin;
+}
+
+.service-card {
+    width: 45vmin;
+    height: 40vmin;
+    box-shadow: 12px 12px 5px rgb(247, 247, 247);
+    border-radius: 3vmin;
+}
+
+.card-image img {
+    height: 15vmin;
+}
+
+.card-head {
+    text-align: center;
+    font-size: 4vmin;
+    line-height: 3vmin;
+    margin: 0;
+    margin-top: 4vmin;
+}
+
+.card-content {
+    color: rgb(100, 100, 100);
+    text-align: center;
+}
+
+.service-btn {
+    width: 25vmin;
+    height: 7vmin;
+    line-height: 7vmin;
+    position: relative;
+    top: 15vmin;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border: 0.1vmin solid #ffca00;
+    border-radius: 5vmin;
+    color: #ffca00;
+    font-size: 2.3vmin;
+}
+
+.service-btn:hover {
+    color: black;
+    border: 0.1vmin solid black;
+}
+
+.service-btn:active {
+    color: black;
+    border: 0.1vmin solid black;
+}
+
+.test-head {
+    top: 20vmin;
+    position: relative;
+}
+
+.test-line {
+    position: relative;
+    top: 18vmin;
+}
+
+.test-card-container {
+    width: 75%;
+    position: relative;
+    top: 25vmin;
+}
+
+.test-card {
+    width: 45vmin;
+    height: 50vmin;
+    box-shadow: 12px 12px 5px rgb(247, 247, 247);
+    border-radius: 3vmin;
+}
+
+.card-action a {
+    font-size: 2vmin;
+}
+
+.card-action i {
+    vertical-align: middle;
+    font-size: 2vmin;
+}
+
+.test-btn {
+    width: 25vmin;
+    height: 7vmin;
+    line-height: 7vmin;
+    position: relative;
+    top: 30vmin;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border: 0.1vmin solid #ffca00;
+    border-radius: 5vmin;
+    color: #ffca00;
+    font-size: 2.3vmin;
+}
+
+.test-btn i {
+    font-size: 3.3vmin;
+    vertical-align: middle;
+}
+
+.test-btn:hover {
+    color: black;
+    border: 0.1vmin solid black;
+}
+
+.test-btn:active {
+    color: black;
+    border: 0.1vmin solid black;
+}
+
+@media only screen and (max-width: 414px) {
+    .intro-container {
+        height: 60vh;
+    }
+    .intro-text,
+    .intro-img {
+        position: relative;
+        top: 33%;
+    }
+    .card-container {
+        width: 95%;
+    }
+    .service-card {
+        margin: 0;
+        padding: 0;
+        width: 25vmin;
+        height: 25vmin;
+    }
+    .card-head {
+        margin: 3vmin;
+    }
+    .card-content {
+        display: none;
+    }
+    .test-card-container {
+        width: 95%;
+    }
+    .test-card {
+        margin: 0;
+        padding: 0;
+        width: 32vmin;
+        height: 25vmin;
+    }
+}
