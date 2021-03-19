@@ -24,6 +24,34 @@ nav {
     font-weight: bold;
 }
 
+.dropdown-content {
+    width: 30vmin !important;
+    height: auto !important;
+}
+
+.dropdown-trigger i {
+    position: relative;
+    top: 1.7vmin;
+}
+
+.collapsible:active {
+    background: white;
+}
+
+.collapsible-header span {
+    font-size: 4vmin;
+    font-weight: 600;
+    margin-left: 4vmin;
+}
+
+.collapsible-body li span {
+    margin-left: 5vmin;
+}
+
+.collapsible-body ul li:first-of-type {
+    display: none;
+}
+
 @media only screen and (max-width: 414px) {
     .brand-logo {
         font-size: 10vmin;

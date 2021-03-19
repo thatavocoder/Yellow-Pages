@@ -20,6 +20,14 @@
 </head>
 
 <body>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">School</a></li>
+        <li><a href="#!">Junior College</a></li>
+        <li><a href="#!">Diploma/ Polytechnic</a></li>
+        <li><a href="#!">Graduate</a></li>
+        <li><a href="#!">Post - Graduate</a></li>
+        <li><a href="#!">PhD/ Post - Doctorate</a></li>
+    </ul>
     <nav>
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">
@@ -28,24 +36,38 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down menu-list">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Diagnostics</a></li>
-                <li><a href="#">Hospitals</a></li>
-                <li><a href="#">Medicines</a></li>
-                <li><a href="#">Epuipments</a></li>
-                <li><a href="#">After-treatment</a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Scholarships<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="#">Loans</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Guidance</a></li>
                 <li><a href="#">Q&A</a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Diagnostics</a></li>
-        <li><a href="#">Hospitals</a></li>
-        <li><a href="#">Medicines</a></li>
-        <li><a href="#">Epuipments</a></li>
-        <li><a href="#">After-treatment</a></li>
-        <li><a href="#">Q&A</a></li>
+        <li class="sidenav-option"><a href="#">Home</a></li>
+        <li class="active sidenav-option"><a href="#">Home</a></li>
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header"><span>Scholarships</span></div>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#!"><span>Lorem</span></a></li>
+                        <li><a href="#!"><span>School</span></a></li>
+                        <li><a href="#!"><span>Junior College</span></a></li>
+                        <li><a href="#!"><span>Diploma/ Polytechnic</span></a></li>
+                        <li><a href="#!"><span>Graduate</span></a></li>
+                        <li><a href="#!"><span>Post - Graduate</span></a></li>
+                        <li><a href="#!"><span>PhD/ Post - Doctorate</span></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li class="sidenav-option"><a href="#">Loans</a></li>
+        <li class="sidenav-option"><a href="#">Books</a></li>
+        <li class="sidenav-option"><a href="#">Guidance</a></li>
+        <li class="sidenav-option"><a href="#">Q&A</a></li>
     </ul>
 
     <div class="row intro-container">
