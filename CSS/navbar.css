@@ -27,6 +27,7 @@ nav {
 .dropdown-content {
     width: 30vmin !important;
     height: auto !important;
+    color: black;
 }
 
 .dropdown-trigger i {
