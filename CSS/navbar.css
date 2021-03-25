@@ -4,11 +4,11 @@
 }
 
 nav {
-    height: 13vmin;
-    line-height: 13vmin;
+    height: 11vmin;
+    line-height: 11vmin;
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .nav-wrapper {
@@ -32,7 +32,7 @@ nav {
 
 .dropdown-trigger i {
     position: relative;
-    top: 1.7vmin;
+    top: 0.9vmin;
 }
 
 .collapsible:active {
@@ -40,7 +40,7 @@ nav {
 }
 
 .collapsible-header span {
-    font-size: 4vmin;
+    font-size: 3.5vmin;
     font-weight: 600;
     margin-left: 4vmin;
 }

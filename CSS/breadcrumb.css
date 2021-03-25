@@ -1,0 +1,23 @@
+.breadcrumb-container {
+    height: 7vmin;
+    line-height: 7vmin;
+    position: fixed;
+    top: 11vmin;
+    z-index: 99;
+    box-shadow: none;
+}
+
+.breadcrumb-navwrapper {
+    background-color: white;
+}
+
+.breadcrumb-navwrapper a {
+    color: black;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
+}
+
+.breadcrumb-content {
+    color: black;
+    margin-left: 4vmin;
+}

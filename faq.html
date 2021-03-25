@@ -15,62 +15,74 @@
 
     <link href="CSS/index.css" rel="stylesheet">
     <link href="CSS/navbar.css" rel="stylesheet">
-    <link href="CSS/slideshow.css" rel="stylesheet">
+    <link href="CSS/breadcrumb.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
 </head>
 
 <body>
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">School</a></li>
-        <li><a href="#!">Junior College</a></li>
-        <li><a href="#!">Diploma/ Polytechnic</a></li>
-        <li><a href="#!">Graduate</a></li>
-        <li><a href="#!">Post - Graduate</a></li>
-        <li><a href="#!">PhD/ Post - Doctorate</a></li>
-    </ul>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">
-               Yellow Pages
-            </a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down menu-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Scholarships<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="#">Loans</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Guidance</a></li>
-                <li class="active"><a href="faq.html">Q&A</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
-        <li class="sidenav-option"><a href="index.html">Home</a></li>
-        <li class="sidenav-option"><a href="#">Home</a></li>
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header"><span>Scholarships</span></div>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="#!"><span>Lorem</span></a></li>
-                        <li><a href="#!"><span>School</span></a></li>
-                        <li><a href="#!"><span>Junior College</span></a></li>
-                        <li><a href="#!"><span>Diploma/ Polytechnic</span></a></li>
-                        <li><a href="#!"><span>Graduate</span></a></li>
-                        <li><a href="#!"><span>Post - Graduate</span></a></li>
-                        <li><a href="#!"><span>PhD/ Post - Doctorate</span></a></li>
-                    </ul>
-                </div>
-            </li>
+    <div class="navbar-container">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">School</a></li>
+            <li><a href="#!">Junior College</a></li>
+            <li><a href="#!">Diploma/ Polytechnic</a></li>
+            <li><a href="#!">Graduate</a></li>
+            <li><a href="#!">Post - Graduate</a></li>
+            <li><a href="#!">PhD/ Post - Doctorate</a></li>
         </ul>
-        <li class="sidenav-option"><a href="#">Loans</a></li>
-        <li class="sidenav-option"><a href="#">Books</a></li>
-        <li class="sidenav-option"><a href="#">Guidance</a></li>
-        <li class="active sidenav-option"><a href="faq.html">Q&A</a></li>
-    </ul>
 
-    <div>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    Yellow Pages
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Scholarships<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Guidance</a></li>
+                    <li class="active"><a href="faq.html">Q&A</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li class="sidenav-option" style="display: none;"><a href="index.html">Home</a></li>
+            <li class="sidenav-option"><a href="index.html">Home</a></li>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><span>Scholarships</span></div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!"><span>Lorem</span></a></li>
+                            <li><a href="#!"><span>School</span></a></li>
+                            <li><a href="#!"><span>Junior College</span></a></li>
+                            <li><a href="#!"><span>Diploma/ Polytechnic</span></a></li>
+                            <li><a href="#!"><span>Graduate</span></a></li>
+                            <li><a href="#!"><span>Post - Graduate</span></a></li>
+                            <li><a href="#!"><span>PhD/ Post - Doctorate</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <li class="sidenav-option"><a href="loans.html">Loans</a></li>
+            <li class="sidenav-option"><a href="#">Books</a></li>
+            <li class="sidenav-option"><a href="#">Guidance</a></li>
+            <li class="active sidenav-option"><a href="faq.html">Q&A</a></li>
+        </ul>
+        <nav class="breadcrumb-container">
+            <div class="nav-wrapper breadcrumb-navwrapper">
+                <div class="col s12 breadcrumb-content">
+                    <a href="#index.html">Home</a> >
+                    <a href="#loans.html">FAQs</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
 
         <div class="row">
 
@@ -83,38 +95,38 @@
                 <form action="#">
                     <p>
                         <label>
-              <input type="checkbox" />
-              <span style="color:black;">Scholarships</span>
-            </label>
+                            <input type="checkbox" />
+                            <span style="color:black;">Scholarships</span>
+                        </label>
                     </p>
 
                     <p>
                         <label>
-              <input type="checkbox" />
-              <span style="color:black;">Loans</span>
-            </label>
+                            <input type="checkbox" />
+                            <span style="color:black;">Loans</span>
+                        </label>
                     </p>
 
                     <p>
                         <label>
-              <input type="checkbox" />
-              <span style="color:black;">Books</span>
-            </label>
+                            <input type="checkbox" />
+                            <span style="color:black;">Books</span>
+                        </label>
                     </p>
 
 
                     <p>
                         <label>
-              <input type="checkbox" />
-              <span style="color:black;">About us</span>
-            </label>
+                            <input type="checkbox" />
+                            <span style="color:black;">About us</span>
+                        </label>
                     </p>
 
                     <p>
                         <label>
-              <input type="checkbox" />
-              <span style="color:black;">Guidance</span>
-            </label>
+                            <input type="checkbox" />
+                            <span style="color:black;">Guidance</span>
+                        </label>
                     </p>
 
                     <a style="background-color: #ffcc00;" class="waves-effect waves-light btn-small">Apply</a>
@@ -129,32 +141,45 @@
                 <br>
 
                 <h5>Frequently Asked Questions</h5>
-                <p>One stop destination to all your queries related to scholarships,loans,books and selecting your career options
+                <p>One stop destination to all your queries related to scholarships,loans,books and selecting your
+                    career options
                 </p>
                 <ul class="collapsible expandable">
 
                     <li>
-                        <div class="collapsible-header" style="background-color:#ffcc00;"><i class="material-icons">filter_drama</i>First</div>
+                        <div class="collapsible-header" style="background-color:#ffcc00;"><i
+                                class="material-icons">filter_drama</i>First</div>
                         <div class="collapsible-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
                         <br>
 
                     </li>
                     <li class="active">
-                        <div class="collapsible-header" style="background-color:#ffcc00;"><i class="material-icons">filter_drama</i>Second</div>
+                        <div class="collapsible-header" style="background-color:#ffcc00;"><i
+                                class="material-icons">filter_drama</i>Second</div>
                         <div class="collapsible-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat</div><br>
                     </li>
                     <li>
-                        <div class="collapsible-header" style="background-color: #ffcc00;"><i class="material-icons">filter_drama</i>Third</div>
+                        <div class="collapsible-header" style="background-color: #ffcc00;"><i
+                                class="material-icons">filter_drama</i>Third</div>
                         <div class="collapsible-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.></div><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.></div><br>
                     </li>
                     <li>
-                        <div class="collapsible-header" style="background-color:#ffcc00;"><i class="material-icons">filter_drama</i>Fourth</div>
+                        <div class="collapsible-header" style="background-color:#ffcc00;"><i
+                                class="material-icons">filter_drama</i>Fourth</div>
                         <div class="collapsible-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.></div><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.></div><br>
                     </li>
                 </ul>
             </div>
