@@ -16,6 +16,7 @@
     <link href="CSS/navbar.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="CSS/breadcrumb.css" rel="stylesheet">
+    <link href="CSS/SchoolScholarship.css" rel="stylesheet">
 
     <title>Yellow Pages - School Scholarships</title>
 </head>
@@ -86,7 +87,7 @@
 
     <div class="card-container" style=" position: relative; top: 20vmin;">
         <div class="row">
-            <div class="col l2 m3 hide-on-small-only" style="border-right: 0.1vmin solid;">
+            <div class="col l2 m3 hide-on-small-only">
                 <form action="#">
                     <label for="state">State/ Union Territory:</label>
                     <input list="states" name="state" id="state" style="font-size: 2vmin;">
@@ -204,22 +205,24 @@
 
                 </form>
             </div>
-            <div class="row col l10 m9" style="text-align: center;">
-                <div class="col s12 m6 l4">
+            <div class="row col l10 m9" id="maincontainer">
+                <!-- <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-content">
-                            <span class="card-title black-text" style="padding-bottom: 1vmin; margin-bottom: 3vmin; border-bottom: 0.2vmin solid rgb(226, 226, 226); font-size: 4vmin;">Card Title</span>
-                            <div class="row"> 
-                                <img src="Images/person.png" class="col s4 m4 l4 offset-m4 offset-s4" style="height: 7vmin; width: auto; margin-bottom: 2vmin;">
-                                <p class="col s12 m12 l8" style="height: auto; border: 0.2vmin solid; border-radius: 1vmin; padding: 2vmin;">Amount: ₹0000</p>
+                            <span id="cardtitle" class="card-title black-text"></span>
+                            <div class="row" id="content"> 
+                                <img src="" id="cardimg" class="col s4 m4 l4 offset-m4 offset-s4">
+                                <p class="cardaward"></p>
                             </div>
-                            <p style="width: 100%; height: auto; padding: 2vmin; border: 0.2vmin solid; border-radius: 1vmin;" class="truncate">Eligibility: criterion1, criterion2</p>
+                            <p class="truncate updated"></p>
+                            <br>
+                            <p id="deadline" class="truncate"></p>
                         </div>
-                        <div class="card-action" style="text-align: center;">
-                            <a href="aboutscholarship.html">View Details</a>
+                        <div class="card-action">
+                            <a href="">View Details</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -269,6 +272,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="js/navbar.js"></script>
+    <script src="js/SchoolScholarships.js"></script>
 
 </body>
 

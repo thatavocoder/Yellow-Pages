@@ -1,0 +1,45 @@
+#maincontainer {
+    border-left: 0.2vmin solid rgb(226, 226, 226);
+}
+
+.card-content {
+    text-align: center;
+}
+
+.cardtitle {
+    padding-bottom: 1vmin;
+    margin-bottom: 3vmin;
+    border-bottom: 0.2vmin solid rgb(226, 226, 226);
+    line-height: 3.7vmin;
+}
+
+.cardimg {
+    height: 7vmin;
+    width: 7vmin;
+    margin-bottom: 2vmin;
+    margin-right: 4vmin;
+}
+
+.cardaward {
+    height: 9vmin;
+    line-height: 3.5vmin;
+    border: 0.2vmin solid rgb(226, 226, 226);
+    border-radius: 1vmin;
+    padding: 1vmin;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.updated, .deadline {
+    width: 100%;
+    height: auto;
+    padding: 2vmin;
+    border: 0.2vmin solid rgb(226, 226, 226);
+    border-radius: 1vmin;
+}
+
+.card-action{
+    text-align: center;
+}
