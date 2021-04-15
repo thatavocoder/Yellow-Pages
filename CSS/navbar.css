@@ -20,33 +20,8 @@ nav {
     color: rgb(0, 0, 0);
 }
 
-.dropdown-content {
-    width: 30vmin !important;
-    height: auto !important;
-    color: black;
-}
-
-.dropdown-trigger i {
-    position: relative;
-    top: 0.9vmin;
-}
-
-.collapsible:active {
-    background: white;
-}
-
-.collapsible-header span {
-    font-size: 3.5vmin;
-    font-weight: 600;
-    margin-left: 4vmin;
-}
-
-.collapsible-body li span {
-    margin-left: 5vmin;
-}
-
-.collapsible-body ul li:first-of-type {
-    display: none;
+.active{
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 414px) {

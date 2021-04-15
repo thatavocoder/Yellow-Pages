@@ -16,23 +16,14 @@
     <link href="CSS/navbar.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="CSS/breadcrumb.css" rel="stylesheet">
-    <link href="CSS/SchoolScholarship.css" rel="stylesheet">
+    <link href="CSS/Scholarship.css" rel="stylesheet">
 
-    <title>Yellow Pages - School Scholarships</title>
+    <title>Yellow Pages - Scholarships</title>
 </head>
 
 <body>
 
     <div class="navbar-container">
-        <ul id="dropdown1" class="dropdown-content">
-            <li class="active"><a href="SchoolScholarships.html">School</a></li>
-            <li><a href="JrClgScholarships.html">Junior College</a></li>
-            <li><a href="#!">Diploma/ Polytechnic</a></li>
-            <li><a href="#!">Graduate</a></li>
-            <li><a href="#!">Post - Graduate</a></li>
-            <li><a href="#!">PhD/ Post - Doctorate</a></li>
-        </ul>
-
         <nav>
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">
@@ -41,9 +32,8 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down menu-list">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a class="dropdown-trigger" href="#!" data-target="dropdown1">Scholarships<i
-                                class="material-icons right">arrow_drop_down</i></a></li>
-                    <li ><a href="Loans.html">Loans</a></li>
+                    <li class="active"><a href="Scholarships.html">Scholarships</a></li>
+                    <li><a href="Loans.html">Loans</a></li>
                     <li><a href="#">Books</a></li>
                     <li><a href="#">Guidance</a></li>
                     <li><a href="faq.html">Q&A</a></li>
@@ -54,22 +44,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li class="sidenav-option" style="display: none;"><a href="index.html">Home</a></li>
             <li class="sidenav-option"><a href="index.html">Home</a></li>
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header active"><span>Scholarships</span></div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="#!"><span>Lorem</span></a></li>
-                            <li><a href="SchoolScholarships.html"><span>School</span></a></li>
-                            <li><a href="JrClgScholarships.html"><span>Junior College</span></a></li>
-                            <li><a href="#!"><span>Diploma/ Polytechnic</span></a></li>
-                            <li><a href="#!"><span>Graduate</span></a></li>
-                            <li><a href="#!"><span>Post - Graduate</span></a></li>
-                            <li><a href="#!"><span>PhD/ Post - Doctorate</span></a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+            <li class="sidenav-option active"><a href="Scholarships.html">Scholarships</a></li>
             <li class="sidenav-option"><a href="loans.html">Loans</a></li>
             <li class="sidenav-option"><a href="#">Books</a></li>
             <li class="sidenav-option"><a href="#">Guidance</a></li>
@@ -79,7 +54,7 @@
             <div class="nav-wrapper breadcrumb-navwrapper">
                 <div class="col s12 breadcrumb-content">
                     <a href="index.html">Home</a> >
-                    <a href="SchoolScholarships.html">School Scholarships</a>
+                    <a href="Scholarships.html">Scholarships</a>
                 </div>
             </div>
         </nav>
@@ -88,7 +63,7 @@
     <div class="card-container" style=" position: relative; top: 20vmin;">
         <div class="row">
             <div class="col l2 m3 hide-on-small-only">
-                <form action="#" method="GET">
+                <form action="#">
                     <label for="state">State/ Union Territory:</label>
                     <input list="states" name="state" id="state" autocomplete="off" style="font-size: 2vmin;">
                     <datalist id="states"></datalist>
@@ -116,7 +91,7 @@
                     <label for="gender">Gender:</label>
                     <input list="genders" name="gender" id="gender" autocomplete="off" style="font-size: 2vmin;">
                     <datalist id="genders"></datalist>
-                    
+
                     <button class="btn waves-effect waves-light submitbtn" type="submit" name="action">Submit</button>
 
                 </form>
@@ -188,7 +163,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="js/navbar.js"></script>
-    <script src="js/SchoolScholarships.js"></script>
+    <script src="js/Scholarships.js"></script>
 
 </body>
 
