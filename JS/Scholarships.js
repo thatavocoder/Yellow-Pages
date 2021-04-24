@@ -12,6 +12,7 @@ async function getscholar(url) {
     scholarships = {
         ...resp
     }
+    console.log(resp);
     createCard(scholarships)
 }
 
@@ -72,13 +73,13 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     url = "https://yp-test-2-new.herokuapp.com/api/scholarship/filter/?"
     var filterVal = {
-        stateval: document.getElementById('state').value,
-        categoryval: document.getElementById('category').value,
-        classval: document.getElementById('class').value,
-        typeval: document.getElementById('type').value,
-        courseval: document.getElementById('course').value,
-        religionval: document.getElementById('religion').value,
-        genderval: document.getElementById('gender').value,
+        state: document.getElementById('state').value,
+        category: document.getElementById('category').value,
+        sclass: document.getElementById('class').value,
+        stype: document.getElementById('type').value,
+        course: document.getElementById('course').value,
+        religion: document.getElementById('religion').value,
+        gender: document.getElementById('gender').value,
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {
@@ -93,81 +94,90 @@ form.addEventListener('submit', (e) => {
 });
 
 function createCard(resp) {
-    for (var i = 0; i <= resp.results.length - 1; i++) {
-        var main = document.getElementById('maincontainer')
-        main.setAttribute("class", "row col l10 m9")
 
-        var subcont = document.createElement('div')
-        subcont.setAttribute("class", "col s12 m12 l4")
-        main.appendChild(subcont)
+    var main = document.getElementById('maincontainer')
+    main.setAttribute("class", "row col l10 m9")
+    main.innerHTML = ''
 
-        var card = document.createElement('div')
-        card.setAttribute("class", "card")
-        subcont.appendChild(card)
+    if (resp.results.length == 0) {
+        main.innerHTML = 'Oops! Nothing to show!'
+        main.style.textAlign = 'center'
+    }
+    else {
+        for (var i = 0; i <= resp.results.length - 1; i++) {
 
-        var cardcontent = document.createElement('div')
-        cardcontent.setAttribute("class", "card-content")
-        card.appendChild(cardcontent)
+            var subcont = document.createElement('div')
+            subcont.setAttribute("class", "col s12 m12 l4")
+            main.appendChild(subcont)
 
-        var title = document.createElement('span')
-        title.setAttribute("class", "card-title black-text cardtitle truncate")
-        title.setAttribute("style", "padding-bottom: 1.5vmin; margin-bottom: 2.7vmin; border-bottom: 0.2vmin solid rgb(226, 226, 226); line-height: 3.7vmin; font-size: 3vmin")
-        title.innerHTML = resp.results[i].title
-        cardcontent.appendChild(title)
+            var card = document.createElement('div')
+            card.setAttribute("class", "card")
+            subcont.appendChild(card)
 
-        var content = document.createElement('div')
-        content.setAttribute("class", "row")
-        cardcontent.appendChild(content)
+            var cardcontent = document.createElement('div')
+            cardcontent.setAttribute("class", "card-content")
+            card.appendChild(cardcontent)
 
-        var image = document.createElement('img')
-        image.setAttribute("class", "col s4 m4 l4 offset-m4 offset-s4")
-        image.src = resp.results[i].img
-        content.appendChild(image)
+            var title = document.createElement('span')
+            title.setAttribute("class", "card-title black-text cardtitle truncate")
+            title.setAttribute("style", "padding-bottom: 1.5vmin; margin-bottom: 2.7vmin; border-bottom: 0.2vmin solid rgb(226, 226, 226); line-height: 3.7vmin; font-size: 3vmin")
+            title.innerHTML = resp.results[i].title
+            cardcontent.appendChild(title)
 
-        if (resp.results[i].image == null) {
-            image.style.display = "none"
-        }
+            var content = document.createElement('div')
+            content.setAttribute("class", "row")
+            cardcontent.appendChild(content)
 
-        var award = document.createElement('p')
-        award.setAttribute("class", "cardaward")
-        award.innerHTML = `Amount: ${resp.results[i].award}`
-        content.appendChild(award)
+            var image = document.createElement('img')
+            image.setAttribute("class", "col s4 m4 l4 offset-m4 offset-s4")
+            image.src = resp.results[i].img
+            content.appendChild(image)
 
-        if (resp.results[i].award == null) {
-            award.innerHTML = "Amount: Information not available"
+            if (resp.results[i].image == null) {
+                image.style.display = "none"
+            }
+
+            var award = document.createElement('p')
+            award.setAttribute("class", "cardaward")
+            award.innerHTML = `Amount: ${resp.results[i].award}`
             content.appendChild(award)
+
+            if (resp.results[i].award == null) {
+                award.innerHTML = "Amount: Information not available"
+                content.appendChild(award)
+            }
+
+            var updated = document.createElement('p')
+            updated.setAttribute("class", "truncate updated")
+            updated.innerHTML = `Updated on : ${resp.results[i].updated_on}`
+            cardcontent.appendChild(updated)
+
+            if (resp.results[i].updated_on == null) {
+                updated.innerHTML = "Updated on : Information not available"
+                content.appendChild(updated)
+            }
+
+            var br = document.createElement('br')
+            cardcontent.appendChild(br)
+
+            var deadline = document.createElement('p')
+            deadline.setAttribute("class", "truncate deadline")
+            deadline.innerHTML = `Deadline : ${resp.results[i].deadline}`
+            cardcontent.appendChild(deadline)
+
+            if (resp.results[i].deadline == null) {
+                deadline.innerHTML = "Deadline : Information not available"
+                content.appendChild(deadline)
+            }
+
+            var action = document.createElement('div')
+            action.setAttribute("class", "card-action")
+            card.appendChild(action)
+
+            var details = document.createElement('a')
+            details.href = "aboutscholarship.html"
+            details.innerHTML = "View Details"
+            action.appendChild(details)
         }
-
-        var updated = document.createElement('p')
-        updated.setAttribute("class", "truncate updated")
-        updated.innerHTML = `Updated on : ${resp.results[i].updated_on}`
-        cardcontent.appendChild(updated)
-
-        if (resp.results[i].updated_on == null) {
-            updated.innerHTML = "Updated on : Information not available"
-            content.appendChild(updated)
-        }
-
-        var br = document.createElement('br')
-        cardcontent.appendChild(br)
-
-        var deadline = document.createElement('p')
-        deadline.setAttribute("class", "truncate deadline")
-        deadline.innerHTML = `Deadline : ${resp.results[i].deadline}`
-        cardcontent.appendChild(deadline)
-
-        if (resp.results[i].deadline == null) {
-            deadline.innerHTML = "Deadline : Information not available"
-            content.appendChild(deadline)
-        }
-
-        var action = document.createElement('div')
-        action.setAttribute("class", "card-action")
-        card.appendChild(action)
-
-        var details = document.createElement('a')
-        details.href = "aboutscholarship.html"
-        details.innerHTML = "View Details"
-        action.appendChild(details)
     }
 }
