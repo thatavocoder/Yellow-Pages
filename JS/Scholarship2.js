@@ -94,7 +94,6 @@ function filterList() {
 
 function submitForm() {
     stateval = document.getElementById('state').value;
-    console.log(stateval);
     categoryval = document.getElementById('category').value;
     classval = document.getElementById('class').value;
     typeval = document.getElementById('type').value;

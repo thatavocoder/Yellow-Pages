@@ -1,130 +1,99 @@
-const url = 'https://yp-test-2-new.herokuapp.com'
+var url = 'https://yp-test-2-new.herokuapp.com/api/scholarship/active/'
+var scholarships;
 
-async function fetchFilterFields() {
-    const filterUrl = url + '/api/scholarship/filterFields'
-    const res = await fetch(filterUrl);
-    const data = await res.json()
-    return data;
-}
-fetchFilterFields().then(data => {
-    console.log(data)
+getscholar(url)
+    .catch(error => {
+        console.log(error)
+    })
 
-    if (data.state.length == 0) {
-        document.getElementById('states').setAttribute("disabled", "true")
+async function getscholar(url) {
+    const schlist = await fetch(url)
+    const resp = await schlist.json()
+    scholarships = {
+        ...resp
     }
-    const stateDD = document.getElementById('states');
-    for (var i = 0; i < data.state.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.state[i].name
-        options.innerHTML = data.state[i].name
-        stateDD.appendChild(options)
-    }
-
-    if (data.category.length == 0) {
-        document.getElementById('category').setAttribute("disabled", "true")
-    }
-    const categoryDD = document.getElementById('categories');
-    for (var i = 0; i < data.category.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.category[i].name
-        options.innerHTML = data.category[i].name
-        categoryDD.appendChild(options)
-    }
-
-
-    if (data.class.length == 0) {
-        document.getElementById('class').setAttribute("disabled", "true")
-    }
-    const classDD = document.getElementById('classes');
-    for (var i = 0; i < data.class.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.class[i].name
-        options.innerHTML = data.class[i].name
-        classDD.appendChild(options)
-    }
-
-
-    if (data.type.length == 0) {
-        document.getElementById('type').setAttribute("disabled", "true")
-    }
-    const typeDD = document.getElementById('types');
-    for (var i = 0; i < data.type.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.type[i].name
-        options.innerHTML = data.type[i].name
-        typeDD.appendChild(options)
-    }
-
-
-    if (data.religion.length == 0) {
-        document.getElementById('religion').setAttribute("disabled", "true")
-    }
-    const religionDD = document.getElementById('religions');
-    for (var i = 0; i < data.religion.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.relgion[i].name
-        options.innerHTML = data.religion[i].name
-        religionDD.appendChild(options)
-    }
-
-    if (data.course.length == 0) {
-        document.getElementById('course').setAttribute("disabled", "true")
-    }
-    const courseDD = document.getElementById('courses');
-    for (var i = 0; i < data.course.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.course[i].name
-        options.innerHTML = data.course[i].name
-        courseDD.appendChild(options)
-    }
-
-    if (data.gender.length == 0) {
-        document.getElementById('gender').setAttribute("disabled", "true")
-    }
-    const genderDD = document.getElementById('genders');
-    for (var i = 0; i < data.gender.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.gender[i].name
-        options.innerHTML = data.gender[i].name
-        genderDD.appendChild(options)
-    }
-
-})
-
-var nUrl = ''
-document.addEventListener('submit', clickSubmit())
-
-function clickSubmit() {
-    stateval = document.getElementById('state').value;
-    categoryval = document.getElementById('category').value;
-    classval = document.getElementById('class').value;
-    typeval = document.getElementById('type').value;
-    courseval = document.getElementById('course').value;
-    relgionval = document.getElementById('religion').value;
-    genderval = document.getElementById('gender').value;
-    if (classval == '') {
-        classval = "UG"
-    }
-    if (genderval == '') {
-        genderval = "All"
-    }
-    window.nUrl = '?state=' + stateval + '&category=' + categoryval + '&sclass=' + classval + '&stype=' + typeval + '&course=' + courseval + '&religion=' + relgionval + '&gender=' + genderval
+    createCard(scholarships)
 }
 
-console.log(nUrl);
+async function getfields(url) {
 
-console.log(activeUrl);
-var activeUrl = url + '/api/scholarship/filter/' + nUrl;
+    var filterFields = 'https://yp-test-2-new.herokuapp.com/api/scholarship/filterFields/'
+    var fields = await fetch(filterFields)
+    var b = await fields.json()
 
-async function fetchActive() {
-    const res = await fetch(activeUrl);
-    const activeData = await res.json()
-    return activeData;
+    var state = document.getElementById('states')
+    for (var i = 0; i < b['state'].length; i++) {
+        var option = document.createElement('option')
+        option.innerHTML = b['state'][i].name
+        state.appendChild(option)
+    }
+    var category = document.getElementById('categories')
+    for (var i = 0; i < b['category'].length; i++) {
+        var option = document.createElement('option')
+        option.innerHTML = b['category'][i].name
+        category.appendChild(option)
+    }
+    var sclass = document.getElementById('classes')
+    for (var i = 0; i < b['class'].length; i++) {
+        var option = document.createElement('option')
+        option.innerHTML = b['class'][i].name
+        sclass.appendChild(option)
+    }
+    var stype = document.getElementById('types')
+    for (var i = 0; i < b['type'].length; i++) {
+        var option = document.createElement('option')
+        option.innerHTML = b['type'][i].name
+        stype.appendChild(option)
+    }
+    var religion = document.getElementById('religions')
+    for (var i = 0; i < b['religion'].length; i++) {
+        var option = document.createElement('option')
+        option.innerHTML = b['religion'][i].name
+        religion.appendChild(option)
+    }
+    var course = document.getElementById('courses')
+    for (var i = 0; i < b['course'].length; i++) {
+        var option = document.createElement('option')
+        option.innerHTML = b['course'][i].name
+        course.appendChild(option)
+    }
+    var gender = document.getElementById('genders')
+    for (var i = 0; i < b['gender'].length; i++) {
+        var option = document.createElement('option')
+        option.innerHTML = b['gender'][i].name
+        gender.appendChild(option)
+    }
 }
-fetchActive().then(activeData => {
-    console.log(activeData)
-    for (var i = 0; i < activeData.results.length; i++) {
 
+getfields()
+
+var form = document.getElementById("filterForm");
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    url = "https://yp-test-2-new.herokuapp.com/api/scholarship/filter/?"
+    var filterVal = {
+        stateval: document.getElementById('state').value,
+        categoryval: document.getElementById('category').value,
+        classval: document.getElementById('class').value,
+        typeval: document.getElementById('type').value,
+        courseval: document.getElementById('course').value,
+        religionval: document.getElementById('religion').value,
+        genderval: document.getElementById('gender').value,
+    }
+    for (const property in filterVal) {
+        if (filterVal[property] == '') {
+            continue
+        }
+        url += `${property}=${filterVal[property]}&`
+    }
+    console.log(url)
+    getscholar(url).catch(error => {
+        console.log(error)
+    })
+});
+
+function createCard(resp) {
+    for (var i = 0; i <= resp.results.length - 1; i++) {
         var main = document.getElementById('maincontainer')
         main.setAttribute("class", "row col l10 m9")
 
@@ -143,7 +112,7 @@ fetchActive().then(activeData => {
         var title = document.createElement('span')
         title.setAttribute("class", "card-title black-text cardtitle truncate")
         title.setAttribute("style", "padding-bottom: 1.5vmin; margin-bottom: 2.7vmin; border-bottom: 0.2vmin solid rgb(226, 226, 226); line-height: 3.7vmin; font-size: 3vmin")
-        title.innerHTML = activeData.results[i].title
+        title.innerHTML = resp.results[i].title
         cardcontent.appendChild(title)
 
         var content = document.createElement('div')
@@ -152,29 +121,29 @@ fetchActive().then(activeData => {
 
         var image = document.createElement('img')
         image.setAttribute("class", "col s4 m4 l4 offset-m4 offset-s4")
-        image.src = activeData.results[i].img
+        image.src = resp.results[i].img
         content.appendChild(image)
 
-        if (activeData.results[i].image == null) {
+        if (resp.results[i].image == null) {
             image.style.display = "none"
         }
 
         var award = document.createElement('p')
         award.setAttribute("class", "cardaward")
-        award.innerHTML = `Amount: ${activeData.results[i].award}`
+        award.innerHTML = `Amount: ${resp.results[i].award}`
         content.appendChild(award)
 
-        if (activeData.results[i].award == null) {
+        if (resp.results[i].award == null) {
             award.innerHTML = "Amount: Information not available"
             content.appendChild(award)
         }
 
         var updated = document.createElement('p')
         updated.setAttribute("class", "truncate updated")
-        updated.innerHTML = `Updated on : ${activeData.results[i].updated_on}`
+        updated.innerHTML = `Updated on : ${resp.results[i].updated_on}`
         cardcontent.appendChild(updated)
 
-        if (activeData.results[i].updated_on == null) {
+        if (resp.results[i].updated_on == null) {
             updated.innerHTML = "Updated on : Information not available"
             content.appendChild(updated)
         }
@@ -184,10 +153,10 @@ fetchActive().then(activeData => {
 
         var deadline = document.createElement('p')
         deadline.setAttribute("class", "truncate deadline")
-        deadline.innerHTML = `Deadline : ${activeData.results[i].deadline}`
+        deadline.innerHTML = `Deadline : ${resp.results[i].deadline}`
         cardcontent.appendChild(deadline)
 
-        if (activeData.results[i].deadline == null) {
+        if (resp.results[i].deadline == null) {
             deadline.innerHTML = "Deadline : Information not available"
             content.appendChild(deadline)
         }
@@ -201,97 +170,4 @@ fetchActive().then(activeData => {
         details.innerHTML = "View Details"
         action.appendChild(details)
     }
-})
-
-
-/*
-
-const searchForm = document.querySelector('form');
-const state = document.querySelector('state');
-const category = document.querySelector('category');
-const sclass = document.querySelector('sclass');
-const stype = document.querySelector('stype');
-const religion = document.querySelector('religion');
-const course = document.querySelector('course');
-const gender = document.querySelector('gender');
-
-for (var i = 0; i < activeData.results.length; i++) {
-
-    var main = document.getElementById('maincontainer')
-    main.setAttribute("class", "row col l10 m9")
-
-    var subcont = document.createElement('div')
-    subcont.setAttribute("class", "col s12 m12 l4")
-    main.appendChild(subcont)
-
-    var card = document.createElement('div')
-    card.setAttribute("class", "card")
-    subcont.appendChild(card)
-
-    var cardcontent = document.createElement('div')
-    cardcontent.setAttribute("class", "card-content")
-    card.appendChild(cardcontent)
-
-    var title = document.createElement('span')
-    title.setAttribute("class", "card-title black-text cardtitle truncate")
-    title.setAttribute("style", "padding-bottom: 1.5vmin; margin-bottom: 2.7vmin; border-bottom: 0.2vmin solid rgb(226, 226, 226); line-height: 3.7vmin; font-size: 3vmin")
-    title.innerHTML = activeData.results[i].title
-    cardcontent.appendChild(title)
-
-    var content = document.createElement('div')
-    content.setAttribute("class", "row")
-    cardcontent.appendChild(content)
-
-    var image = document.createElement('img')
-    image.setAttribute("class", "col s4 m4 l4 offset-m4 offset-s4")
-    image.src = activeData.results[i].img
-    content.appendChild(image)
-
-    if (activeData.results[i].image == null) {
-        image.style.display = "none"
-    }
-
-    var award = document.createElement('p')
-    award.setAttribute("class", "cardaward")
-    award.innerHTML = `Amount: ${activeData.results[i].award}`
-    content.appendChild(award)
-
-    if (activeData.results[i].award == null) {
-        award.innerHTML = "Amount: Information not available"
-        content.appendChild(award)
-    }
-
-    var updated = document.createElement('p')
-    updated.setAttribute("class", "truncate updated")
-    updated.innerHTML = `Updated on : ${activeData.results[i].updated_on}`
-    cardcontent.appendChild(updated)
-
-    if (activeData.results[i].updated_on == null) {
-        updated.innerHTML = "Updated on : Information not available"
-        content.appendChild(updated)
-    }
-
-    var br = document.createElement('br')
-    cardcontent.appendChild(br)
-
-    var deadline = document.createElement('p')
-    deadline.setAttribute("class", "truncate deadline")
-    deadline.innerHTML = `Deadline : ${activeData.results[i].deadline}`
-    cardcontent.appendChild(deadline)
-
-    if (activeData.results[i].deadline == null) {
-        deadline.innerHTML = "Deadline : Information not available"
-        content.appendChild(deadline)
-    }
-
-    var action = document.createElement('div')
-    action.setAttribute("class", "card-action")
-    card.appendChild(action)
-
-    var details = document.createElement('a')
-    details.href = "aboutscholarship.html"
-    details.innerHTML = "View Details"
-    action.appendChild(details)
 }
-
-*/
