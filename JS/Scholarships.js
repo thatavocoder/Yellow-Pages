@@ -1,6 +1,121 @@
 const url = 'https://yp-test-2-new.herokuapp.com'
 
-activeUrl = url + '/api/scholarship/active'
+async function fetchFilterFields() {
+    const filterUrl = url + '/api/scholarship/filterFields'
+    const res = await fetch(filterUrl);
+    const data = await res.json()
+    return data;
+}
+fetchFilterFields().then(data => {
+    console.log(data)
+
+    if (data.state.length == 0) {
+        document.getElementById('states').setAttribute("disabled", "true")
+    }
+    const stateDD = document.getElementById('states');
+    for (var i = 0; i < data.state.length; i++) {
+        var options = document.createElement('option')
+        options.value = data.state[i].name
+        options.innerHTML = data.state[i].name
+        stateDD.appendChild(options)
+    }
+
+    if (data.category.length == 0) {
+        document.getElementById('category').setAttribute("disabled", "true")
+    }
+    const categoryDD = document.getElementById('categories');
+    for (var i = 0; i < data.category.length; i++) {
+        var options = document.createElement('option')
+        options.value = data.category[i].name
+        options.innerHTML = data.category[i].name
+        categoryDD.appendChild(options)
+    }
+
+
+    if (data.class.length == 0) {
+        document.getElementById('class').setAttribute("disabled", "true")
+    }
+    const classDD = document.getElementById('classes');
+    for (var i = 0; i < data.class.length; i++) {
+        var options = document.createElement('option')
+        options.value = data.class[i].name
+        options.innerHTML = data.class[i].name
+        classDD.appendChild(options)
+    }
+
+
+    if (data.type.length == 0) {
+        document.getElementById('type').setAttribute("disabled", "true")
+    }
+    const typeDD = document.getElementById('types');
+    for (var i = 0; i < data.type.length; i++) {
+        var options = document.createElement('option')
+        options.value = data.type[i].name
+        options.innerHTML = data.type[i].name
+        typeDD.appendChild(options)
+    }
+
+
+    if (data.religion.length == 0) {
+        document.getElementById('religion').setAttribute("disabled", "true")
+    }
+    const religionDD = document.getElementById('religions');
+    for (var i = 0; i < data.religion.length; i++) {
+        var options = document.createElement('option')
+        options.value = data.relgion[i].name
+        options.innerHTML = data.religion[i].name
+        religionDD.appendChild(options)
+    }
+
+    if (data.course.length == 0) {
+        document.getElementById('course').setAttribute("disabled", "true")
+    }
+    const courseDD = document.getElementById('courses');
+    for (var i = 0; i < data.course.length; i++) {
+        var options = document.createElement('option')
+        options.value = data.course[i].name
+        options.innerHTML = data.course[i].name
+        courseDD.appendChild(options)
+    }
+
+    if (data.gender.length == 0) {
+        document.getElementById('gender').setAttribute("disabled", "true")
+    }
+    const genderDD = document.getElementById('genders');
+    for (var i = 0; i < data.gender.length; i++) {
+        var options = document.createElement('option')
+        options.value = data.gender[i].name
+        options.innerHTML = data.gender[i].name
+        genderDD.appendChild(options)
+    }
+
+})
+
+var nUrl = ''
+document.addEventListener('submit', clickSubmit())
+
+function clickSubmit() {
+    stateval = document.getElementById('state').value;
+    categoryval = document.getElementById('category').value;
+    classval = document.getElementById('class').value;
+    typeval = document.getElementById('type').value;
+    courseval = document.getElementById('course').value;
+    relgionval = document.getElementById('religion').value;
+    genderval = document.getElementById('gender').value;
+    if (classval == '') {
+        classval = "UG"
+    }
+    if (genderval == '') {
+        genderval = "All"
+    }
+    window.nUrl = '?state=' + stateval + '&category=' + categoryval + '&sclass=' + classval + '&stype=' + typeval + '&course=' + courseval + '&religion=' + relgionval + '&gender=' + genderval
+}
+
+console.log(nUrl);
+
+console.log(activeUrl);
+var activeUrl = url + '/api/scholarship/filter/' + nUrl;
+
 async function fetchActive() {
     const res = await fetch(activeUrl);
     const activeData = await res.json()
@@ -88,110 +203,6 @@ fetchActive().then(activeData => {
     }
 })
 
-async function fetchFilterFields() {
-    const filterUrl = url + '/api/scholarship/filterFields'
-    const res = await fetch(filterUrl);
-    const data = await res.json()
-    return data;
-}
-fetchFilterFields().then(data => {
-    console.log(data)
-
-    if (data.state.length == 0) {
-        document.getElementById('state').setAttribute("disabled", "true")
-    }
-    const stateDD = document.getElementById('states');
-    for (var i = 0; i < data.state.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.state[i].name
-        options.innerHTML = data.state[i].name
-        stateDD.appendChild(options)
-    }
-
-    if (data.category.length == 0) {
-        document.getElementById('category').setAttribute("disabled", "true")
-    }
-    const categoryDD = document.getElementById('categories');
-    for (var i = 0; i < data.category.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.category[i].name
-        options.innerHTML = data.category[i].name
-        categoryDD.appendChild(options)
-    }
-
-
-    if (data.class.length == 0) {
-        document.getElementById('class').setAttribute("disabled", "true")
-    }
-    const classDD = document.getElementById('classes');
-    for (var i = 0; i < data.class.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.class[i].name
-        options.innerHTML = data.class[i].name
-        classDD.appendChild(options)
-    }
-
-
-    if (data.type.length == 0) {
-        document.getElementById('type').setAttribute("disabled", "true")
-    }
-    const typeDD = document.getElementById('types');
-    for (var i = 0; i < data.type.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.type[i].name
-        options.innerHTML = data.type[i].name
-        typeDD.appendChild(options)
-    }
-
-
-    if (data.religion.length == 0) {
-        document.getElementById('religion').setAttribute("disabled", "true")
-    }
-    const religionDD = document.getElementById('religions');
-    for (var i = 0; i < data.religion.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.relgion[i].name
-        options.innerHTML = data.religion[i].name
-        religionDD.appendChild(options)
-    }
-
-    if (data.course.length == 0) {
-        document.getElementById('course').setAttribute("disabled", "true")
-    }
-    const courseDD = document.getElementById('courses');
-    for (var i = 0; i < data.course.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.course[i].name
-        options.innerHTML = data.course[i].name
-        courseDD.appendChild(options)
-    }
-
-    if (data.gender.length == 0) {
-        document.getElementById('gender').setAttribute("disabled", "true")
-    }
-    const genderDD = document.getElementById('genders');
-    for (var i = 0; i < data.gender.length; i++) {
-        var options = document.createElement('option')
-        options.value = data.gender[i].name
-        options.innerHTML = data.gender[i].name
-        genderDD.appendChild(options)
-    }
-
-    const submitForm = document.addEventListener('submit', clickSubmit)
-})
-
-function clickSubmit() {
-    const searchForm = document.querySelector('form');
-    const state = document.getElementById('states').selectedIndex;
-    const svalue = state.text
-    console.log(svalue)
-    const category = document.querySelector('category');
-    const classes = document.querySelector('class');
-    const type = document.querySelector('type');
-    const religion = document.querySelector('religion');
-    const course = document.querySelector('course');
-    const gender = document.querySelector('gender');
-}
 
 /*
 
