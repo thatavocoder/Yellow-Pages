@@ -62,10 +62,17 @@
 
 
     <div class="card-container" style=" position: relative; top: 20vmin;">
-        <ul class="pagination" id="pagination"></ul>
         <div class="row">
             <div class="col l2 m3 hide-on-small-only">
+                <form id="search">
+                    <div class="form-group">
+                        <input type="text" placeholder="Search Scholarships" id="search-elem">
+                    </div>
+                    <button class="btn waves-effect waves-light searchbtn" type="submit">Search</button>
+                </form>
+
                 <form id="filterForm">
+                    <h6>Filters</h6>
                     <label for="state">State/ Union Territory:</label>
                     <input type="text" list="states" name="state" id="state" autocomplete="off"
                         style="font-size: 2vmin;">
@@ -99,11 +106,12 @@
                         style="font-size: 2vmin;">
                     <datalist id="genders"></datalist>
 
-                    <button class="btn waves-effect waves-light submitbtn" type="submit" name="action">Submit</button>
+                    <button class="btn waves-effect waves-light submitbtn" name="action">Submit</button>
 
                 </form>
             </div>
             <div id="modal-container">
+                <ul class="pagination col l10 m9 s12" id="pagination"></ul>
                 <div id="modalcont">
                     <!-- <div id="modal1" class="modal">
                         <div class="modal-content">

@@ -239,3 +239,26 @@ function createPagination(count) {
         })
     })
 }
+
+var search = document.getElementById("search");
+search.addEventListener('submit', (e) => {
+    e.preventDefault();
+    page = 1
+    url = "https://yp-test-2-new.herokuapp.com/api/scholarship/search/?"
+    var filterVal = {
+        q: document.getElementById('search-elem').value,
+    }
+    for (const property in filterVal) {
+        if (filterVal[property] == '') {
+            continue
+        }
+
+        url += `${property}=${filterVal[property]}&`
+
+    }
+
+    getscholar(url).catch(error => {
+        console.log(error)
+    })
+
+});
