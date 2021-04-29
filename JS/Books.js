@@ -1,4 +1,4 @@
-var url = 'https://yp-test-2-new.herokuapp.com/api/scholarship/active/?'
+var url = 'https://yp-test-2-new.herokuapp.com/api/bookbanks/active/?'
 var scholarships;
 var page = 1
 
@@ -22,7 +22,7 @@ async function getscholar(url, page = 1) {
 
 async function getfields(url) {
 
-    var filterFields = 'https://yp-test-2-new.herokuapp.com/api/scholarship/filterFields/'
+    var filterFields = 'https://yp-test-2-new.herokuapp.com/api/bookbanks/filterFields/'
     var fields = await fetch(filterFields)
     var b = await fields.json()
 
@@ -75,7 +75,7 @@ getfields()
 var form = document.getElementById("filterForm");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    url = "https://yp-test-2-new.herokuapp.com/api/scholarship/filter/?"
+    url = "https://yp-test-2-new.herokuapp.com/api/bookbanks/filter/?"
     var filterVal = {
         state: document.getElementById('state').value,
         category: document.getElementById('category').value,
@@ -215,7 +215,7 @@ var search = document.getElementById("search");
 search.addEventListener('submit', (e) => {
     e.preventDefault();
     page = 1
-    url = "https://yp-test-2-new.herokuapp.com/api/scholarship/search/?"
+    url = "https://yp-test-2-new.herokuapp.com/api/bookbanks/search/?"
     var filterVal = {
         q: document.getElementById('search-elem').value,
     }
