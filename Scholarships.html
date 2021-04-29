@@ -60,7 +60,9 @@
         </nav>
     </div>
 
+
     <div class="card-container" style=" position: relative; top: 20vmin;">
+        <ul class="pagination" id="pagination"></ul>
         <div class="row">
             <div class="col l2 m3 hide-on-small-only">
                 <form id="filterForm">
@@ -101,27 +103,42 @@
 
                 </form>
             </div>
-            <div class="row col l10 m9" id="maincontainer">
-                <!-- <div class="col s12 m12 l4">
-                    <div class="card">
-                        <div class="card-content">
-                            <span id="cardtitle" class="card-title black-text"></span>
-                            <div class="row" id="content"> 
-                                <img src="" id="cardimg" class="col s4 m4 l4 offset-m4 offset-s4">
-                                <p class="cardaward"></p>
+            <div id="modal-container">
+                <div id="modalcont">
+                    <!-- <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h4 class="modalh4"></h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="row col l10 m9" id="maincontainer">
+                    <!-- <div class="col s12 m12 l4">
+                        <div class="card">
+                            <div class="card-content">
+                                <span id="cardtitle" class="card-title black-text"></span>
+                                <div class="row" id="content"> 
+                                    <img src="" id="cardimg" class="col s4 m4 l4 offset-m4 offset-s4">
+                                    <p class="cardaward"></p>
+                                </div>
+                                <p class="truncate updated"></p>
+                                <br>
+                                <p id="deadline" class="truncate"></p>
                             </div>
-                            <p class="truncate updated"></p>
-                            <br>
-                            <p id="deadline" class="truncate"></p>
+                            <div class="card-action">
+                                <a href="">View Details</a>
+                            </div>
                         </div>
-                        <div class="card-action">
-                            <a href="">View Details</a>
-                        </div>
-                    </div>
-                </div> -->
+                    </div> -->
+                </div>
             </div>
         </div>
     </div>
+
 
     <footer class="page-footer" style="background-color: #ffca00;">
         <div class="container">
@@ -169,6 +186,13 @@
 
     <script src="js/navbar.js"></script>
     <script src="js/Scholarships.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, {});
+        });
+    </script>
 
 </body>
 

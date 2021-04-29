@@ -43,3 +43,12 @@
 .card-action{
     text-align: center;
 }
+
+.pagebtn{
+    background-color: #ffca00;
+    margin: 0.5vmin;
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}

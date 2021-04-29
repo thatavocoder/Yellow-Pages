@@ -1,12 +1,14 @@
-var url = 'https://yp-test-2-new.herokuapp.com/api/scholarship/active/'
+var url = 'https://yp-test-2-new.herokuapp.com/api/scholarship/active/?'
 var scholarships;
+var page = 1
 
-getscholar(url)
+getscholar(url, page = 1)
     .catch(error => {
         console.log(error)
     })
 
-async function getscholar(url) {
+async function getscholar(url, page = 1) {
+    url += `page=${page}`
     const schlist = await fetch(url)
     const resp = await schlist.json()
     scholarships = {
@@ -14,6 +16,7 @@ async function getscholar(url) {
     }
     console.log(resp);
     createCard(scholarships)
+    createPagination(scholarships.count)
 }
 
 async function getfields(url) {
@@ -95,6 +98,36 @@ form.addEventListener('submit', (e) => {
 
 function createCard(resp) {
 
+    var modalcont = document.getElementById('modalcont')
+    modalcont.innerHTML = ''
+
+    for (var j = 0; j <= resp.results.length - 1; j++) {
+        var modal = document.createElement('div')
+        modal.className = 'modal'
+        modal.id = `modal${resp.results[j].id}`
+        console.log(modal.id);
+        modalcont.appendChild(modal)
+
+        var mcontent = document.createElement('div')
+        mcontent.className = 'modal-content'
+        modal.appendChild(mcontent)
+
+        var mH4 = document.createElement('h4')
+        mH4.innerHTML = resp.results[j].title
+        console.log(mH4.innerHTML);
+        mcontent.appendChild(mH4)
+
+        var mfooter = document.createElement('div')
+        mfooter.className = 'modal-footer'
+        modal.appendChild(mfooter)
+
+        var mclose = document.createElement('a')
+        mclose.setAttribute('class', 'modal-close waves-effect waves-green btn-flat')
+        mclose.href = '#!'
+        mclose.innerHTML = 'Close'
+        mfooter.appendChild(mclose)
+    }
+
     var main = document.getElementById('maincontainer')
     main.setAttribute("class", "row col l10 m9")
     main.innerHTML = ''
@@ -175,9 +208,34 @@ function createCard(resp) {
             card.appendChild(action)
 
             var details = document.createElement('a')
-            details.href = "aboutscholarship.html"
+            details.href = `#modal${resp.results[i].id}`
+            details.className = 'modal-trigger'
             details.innerHTML = "View Details"
             action.appendChild(details)
         }
     }
+}
+
+function createPagination(count) {
+    var totalPages = Math.ceil(count / 5)
+    console.log(totalPages)
+    var pageCont = document.getElementById('pagination')
+    pageCont.innerHTML = ''
+
+    if (totalPages > 0) {
+        for (var i = 1; i <= totalPages; i++) {
+            btn = document.createElement('li')
+            btn.setAttribute('class', 'waves-effect pagebtn')
+            pageCont.appendChild(btn)
+            var btna = document.createElement('a')
+            btna.innerHTML = `${i}`
+            btna.setAttribute('class', 'pageBtn')
+            btn.appendChild(btna)
+        }
+    }
+    document.querySelectorAll('.pageBtn').forEach(item => {
+        item.addEventListener('click', event => {
+            getscholar(url, item.innerHTML)
+        })
+    })
 }
