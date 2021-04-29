@@ -118,8 +118,6 @@ function createPagination(count) {
 
 }
 
-
-
 var search = document.getElementById("search");
 search.addEventListener('submit', (e) => {
     e.preventDefault();
