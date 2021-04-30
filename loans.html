@@ -34,10 +34,11 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Scholarships.html">Scholarships</a></li>
                     <li class="active"><a href="Loans.html">Loans</a></li>
-                    <li><a href="#">Books</a></li>
+                    <li><a href="Books.html">Books</a></li>
+                    <li><a href="NGOs.html">NGOs</a></li>
                     <li><a href="crowdsourcing.html">Contribute</a></li>
                     <li><a href="faq.html">Q&A</a></li>
-                   
+
                 </ul>
             </div>
         </nav>
@@ -47,11 +48,11 @@
             <li class="sidenav-option"><a href="index.html">Home</a></li>
             <li class="sidenav-option"><a href="Scholarships.html">Scholarships</a></li>
             <li class="sidenav-option active"><a href="loans.html">Loans</a></li>
-            <li class="sidenav-option"><a href="#">Books</a></li>
+            <li class="sidenav-option"><a href="Books.html">Books</a></li>
+            <li class="sidenav-option"><a href="NGOs.html">NGOs</a></li>
             <li class="sidenav-option"><a href="crowdsourcing.html">Contribute</a></li>
-            
             <li class="sidenav-option"><a href="faq.html">Q&A</a></li>
-            
+
         </ul>
         <nav class="breadcrumb-container">
             <div class="nav-wrapper breadcrumb-navwrapper">
@@ -90,7 +91,8 @@
                     <datalist id="district"></datalist>
 
                     <label for="loan_amount">Loan Amount:</label>
-                    <input type="text" list="loan_amounts" name="loan_amount" id="loan_amount" autocomplete="off" style="font-size: 2vmin;">
+                    <input type="text" list="loan_amounts" name="loan_amount" id="loan_amount" autocomplete="off"
+                        style="font-size: 2vmin;">
                     <datalist id="loan_amounts"></datalist>
 
                     <label for="religion">Religion:</label>
@@ -103,11 +105,11 @@
                         style="font-size: 2vmin;">
                     <datalist id="countries"></datalist>
 
-                    <label for="Interest">Interest:</label>
-                    <input type="text" list="Interests" name="Interest" id="Interest" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="Interests"></datalist>
-
+                    <label>
+                        <input type="checkbox" name="interest" id="interest" style="font-size: 2vmin;" />
+                        <span>Interest</span>
+                    </label>
+                    <br />
                     <button class="btn waves-effect waves-light submitbtn" name="action">Submit</button>
 
                 </form>

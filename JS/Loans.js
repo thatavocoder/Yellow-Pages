@@ -48,9 +48,9 @@ async function getfields(url) {
         district.appendChild(option)
     }
     var loanamt = document.getElementById('loan_amounts')
-    for (var i = 0; i < b['loan_amount'].length; i++) {
+    for (var i = 0; i < b['LoanAmt'].length; i++) {
         var option = document.createElement('option')
-        option.innerHTML = b['loan_amount'][i].name
+        option.innerHTML = b['LoanAmt'][i].name
         loanamt.appendChild(option)
     }
     var religion = document.getElementById('religions')
@@ -65,12 +65,6 @@ async function getfields(url) {
         option.innerHTML = b['country'][i].name
         country.appendChild(option)
     }
-    var interest = document.getElementById('interests')
-    for (var i = 0; i < b['interest'].length; i++) {
-        var option = document.createElement('option')
-        option.innerHTML = b['interest'][i].name
-        interest.appendChild(option)
-    }
 }
 
 getfields()
@@ -84,9 +78,9 @@ form.addEventListener('submit', (e) => {
         category: document.getElementById('category').value,
         district: document.getElementById('district').value,
         loan_amount: document.getElementById('loan_amount').value,
-        country: document.getElementById('country').value,
         religion: document.getElementById('religion').value,
-        interest: document.getElementById('interest').value,
+        country: document.getElementById('country').value,
+        interest: document.getElementById('interest').checked,
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {
