@@ -1,6 +1,10 @@
 var url = 'https://yp-test-2-new.herokuapp.com/api/bookbanks/active/?'
 var scholarships;
 var page = 1
+var modal = document.querySelector('.modal')
+var modalTitle = document.querySelector('.modal-title')
+var modalDetails = document.querySelector('.modal-body')
+var displayItems = ['books', 'state', 'district', 'address', 'content', 'contact', 'site_url']
 
 getscholar(url, page = 1)
     .catch(error => {
@@ -17,7 +21,6 @@ async function getscholar(url, page = 1) {
     console.log(resp);
     createCard(scholarships)
     createPagination(scholarships.count)
-    createModal(scholarships)
 }
 
 async function getfields(url) {
@@ -32,41 +35,17 @@ async function getfields(url) {
         option.innerHTML = b['state'][i].name
         state.appendChild(option)
     }
-    var category = document.getElementById('categories')
-    for (var i = 0; i < b['category'].length; i++) {
+    var district = document.getElementById('districts')
+    for (var i = 0; i < b['district'].length; i++) {
         var option = document.createElement('option')
-        option.innerHTML = b['category'][i].name
-        category.appendChild(option)
+        option.innerHTML = b['district'][i].name
+        district.appendChild(option)
     }
-    var sclass = document.getElementById('classes')
-    for (var i = 0; i < b['class'].length; i++) {
+    var books = document.getElementById('books')
+    for (var i = 0; i < b['books'].length; i++) {
         var option = document.createElement('option')
-        option.innerHTML = b['class'][i].name
-        sclass.appendChild(option)
-    }
-    var stype = document.getElementById('types')
-    for (var i = 0; i < b['type'].length; i++) {
-        var option = document.createElement('option')
-        option.innerHTML = b['type'][i].name
-        stype.appendChild(option)
-    }
-    var religion = document.getElementById('religions')
-    for (var i = 0; i < b['religion'].length; i++) {
-        var option = document.createElement('option')
-        option.innerHTML = b['religion'][i].name
-        religion.appendChild(option)
-    }
-    var course = document.getElementById('courses')
-    for (var i = 0; i < b['course'].length; i++) {
-        var option = document.createElement('option')
-        option.innerHTML = b['course'][i].name
-        course.appendChild(option)
-    }
-    var gender = document.getElementById('genders')
-    for (var i = 0; i < b['gender'].length; i++) {
-        var option = document.createElement('option')
-        option.innerHTML = b['gender'][i].name
-        gender.appendChild(option)
+        option.innerHTML = b['books'][i].name
+        books.appendChild(option)
     }
 }
 
@@ -78,12 +57,8 @@ form.addEventListener('submit', (e) => {
     url = "https://yp-test-2-new.herokuapp.com/api/bookbanks/filter/?"
     var filterVal = {
         state: document.getElementById('state').value,
-        category: document.getElementById('category').value,
-        sclass: document.getElementById('class').value,
-        stype: document.getElementById('type').value,
-        course: document.getElementById('course').value,
-        religion: document.getElementById('religion').value,
-        gender: document.getElementById('gender').value,
+        district: document.getElementById('district').value,
+        books: document.getElementById('book').value
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {
@@ -178,14 +153,45 @@ function createCard(resp) {
             action.setAttribute("class", "card-action")
             card.appendChild(action)
 
-            var details = document.createElement('button')
-            details.id = 'myBtn'
+            var details = document.createElement('a')
+            details.id = resp.results[i].id
             details.setAttribute('class', 'modal-trigger')
+            details.href = '#!'
             details.innerHTML = "View Details"
             action.appendChild(details)
         }
+        document.querySelectorAll('.modal-trigger').forEach(item => {
+            item.addEventListener('click', event => {
+                modal.classList.add('modal-show')
+                var scholarshipDetail
+                for (var i = 0; i < resp.results.length; i++) {
+                    if (item.id == resp.results[i].id) {
+                        scholarshipDetail = resp.results[i]
+                        break;
+                    }
+                }
+                console.log(scholarshipDetail)
+                modalTitle.innerHTML = scholarshipDetail.title
+                for (var j = 0; j < displayItems.length; j++) {
+                    var details = document.createElement('p')
+                    var dethead = document.createElement('span')
+                    dethead.style.fontWeight = 'bold'
+                    dethead.innerHTML = `${displayItems[j]}: `
+                    details.appendChild(dethead)
+                    var deets = document.createElement('span')
+                    deets.innerHTML = scholarshipDetail[displayItems[j]]
+                    details.appendChild(deets)                    
+                    modalDetails.appendChild(details)
+                }
+            })
+        })
     }
 }
+
+btnClose = document.getElementById('btnClose')
+btnClose.addEventListener('click', () => {
+    modal.classList.remove('modal-show')
+})
 
 function createPagination(count) {
     var totalPages = Math.ceil(count / 5)
@@ -221,7 +227,7 @@ search.addEventListener('submit', (e) => {
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {
-            continue
+            url=url
         }
 
         url += `${property}=${filterVal[property]}&`
@@ -233,34 +239,3 @@ search.addEventListener('submit', (e) => {
     })
 
 });
-
-function createModal(resp) {
-    var modalcont = document.getElementById('modalcont')
-    modalcont.innerHTML = ''
-    for (var j = 0; j <= resp.results.length - 1; j++) {
-        var modal = document.createElement('div')
-        modal.className = 'modal'
-        modal.id = `modal${resp.results[j].id}`
-        console.log(modal.id);
-        modalcont.appendChild(modal)
-
-        var mcontent = document.createElement('div')
-        mcontent.className = 'modal-content'
-        modal.appendChild(mcontent)
-
-        var mH4 = document.createElement('h4')
-        mH4.innerHTML = resp.results[j].title
-        console.log(mH4.innerHTML);
-        mcontent.appendChild(mH4)
-
-        var mfooter = document.createElement('div')
-        mfooter.className = 'modal-footer'
-        modal.appendChild(mfooter)
-
-        var mclose = document.createElement('a')
-        mclose.setAttribute('class', 'modal-close waves-effect waves-green btn-flat')
-        mclose.href = '#!'
-        mclose.innerHTML = 'Close'
-        mfooter.appendChild(mclose)
-    }
-}

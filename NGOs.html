@@ -81,11 +81,6 @@
                     <input list="categories" name="category" id="category" autocomplete="off" style="font-size: 2vmin;">
                     <datalist id="categories"></datalist>
 
-                    <label for="class">Class:</label>
-                    <input type="text" list="classes" name="class" id="class" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="classes"></datalist>
-
                     <label for="type">Type:</label>
                     <input type="text" list="types" name="type" id="type" autocomplete="off" style="font-size: 2vmin;">
                     <datalist id="types"></datalist>
@@ -94,11 +89,6 @@
                     <input type="text" list="religions" name="religion" id="religion" autocomplete="off"
                         style="font-size: 2vmin;">
                     <datalist id="religions"></datalist>
-
-                    <label for="course">Course:</label>
-                    <input type="text" list="courses" name="course" id="course" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="courses"></datalist>
 
                     <label for="gender">Gender:</label>
                     <input type="text" list="genders" name="gender" id="gender" autocomplete="off"
@@ -111,16 +101,14 @@
             </div>
             <div id="modal-container">
                 <ul class="pagination col l10 m9 s12" id="pagination"></ul>
-                <div id="modalcont">
-                    <!-- <div id="modal1" class="modal">
-                        <div class="modal-content">
-                            <h4 class="modalh4"></h4>
-                            <p>A bunch of text</p>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                        </div>
-                    </div> -->
+                <div class="modal modal-fixed-footer">
+                    <div class="modal-content ">
+                        <h4 class="modal-title"></h4>
+                        <p class="modal-body"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnClose" class="modal-close waves-effect waves-green btn-flat">Close</button>
+                    </div>
                 </div>
 
                 <div class="row col l10 m9" id="maincontainer">

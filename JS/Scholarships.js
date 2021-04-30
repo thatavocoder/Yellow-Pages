@@ -1,6 +1,10 @@
 var url = 'https://yp-test-2-new.herokuapp.com/api/scholarship/active/?'
 var scholarships;
 var page = 1
+var modal = document.querySelector('.modal')
+var modalTitle = document.querySelector('.modal-title')
+var modalDetails = document.querySelector('.modal-body')
+var displayItems = ['updated_on', 'deadline', 'state', 'country', 'category', 'stype', 'gender','religion', 'about', 'sclass', 'course', 'eligibility', 'award', 'content', 'site_url', 'contact']
 
 getscholar(url, page = 1)
     .catch(error => {
@@ -17,7 +21,6 @@ async function getscholar(url, page = 1) {
     console.log(resp);
     createCard(scholarships)
     createPagination(scholarships.count)
-    createModal(scholarships)
 }
 
 async function getfields(url) {
@@ -178,14 +181,45 @@ function createCard(resp) {
             action.setAttribute("class", "card-action")
             card.appendChild(action)
 
-            var details = document.createElement('button')
-            details.id = 'myBtn'
+            var details = document.createElement('a')
+            details.id = resp.results[i].id
             details.setAttribute('class', 'modal-trigger')
+            details.href = '#!'
             details.innerHTML = "View Details"
             action.appendChild(details)
         }
+        document.querySelectorAll('.modal-trigger').forEach(item => {
+            item.addEventListener('click', event => {
+                modal.classList.add('modal-show')
+                var scholarshipDetail
+                for (var i = 0; i < resp.results.length; i++) {
+                    if (item.id == resp.results[i].id) {
+                        scholarshipDetail = resp.results[i]
+                        break;
+                    }
+                }
+                console.log(scholarshipDetail)
+                modalTitle.innerHTML = scholarshipDetail.title
+                for (var j = 0; j < displayItems.length; j++) {
+                    var details = document.createElement('p')
+                    var dethead = document.createElement('span')
+                    dethead.style.fontWeight = 'bold'
+                    dethead.innerHTML = `${displayItems[j]}: `
+                    details.appendChild(dethead)
+                    var deets = document.createElement('span')
+                    deets.innerHTML = scholarshipDetail[displayItems[j]]
+                    details.appendChild(deets)
+                    modalDetails.appendChild(details)
+                }
+            })
+        })
     }
 }
+
+btnClose = document.getElementById('btnClose')
+btnClose.addEventListener('click', () => {
+    modal.classList.remove('modal-show')
+})
 
 function createPagination(count) {
     var totalPages = Math.ceil(count / 5)
@@ -221,7 +255,7 @@ search.addEventListener('submit', (e) => {
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {
-            continue
+            url=url
         }
 
         url += `${property}=${filterVal[property]}&`
@@ -233,34 +267,3 @@ search.addEventListener('submit', (e) => {
     })
 
 });
-
-function createModal(resp) {
-    var modalcont = document.getElementById('modalcont')
-    modalcont.innerHTML = ''
-    for (var j = 0; j <= resp.results.length - 1; j++) {
-        var modal = document.createElement('div')
-        modal.className = 'modal'
-        modal.id = `modal${resp.results[j].id}`
-        console.log(modal.id);
-        modalcont.appendChild(modal)
-
-        var mcontent = document.createElement('div')
-        mcontent.className = 'modal-content'
-        modal.appendChild(mcontent)
-
-        var mH4 = document.createElement('h4')
-        mH4.innerHTML = resp.results[j].title
-        console.log(mH4.innerHTML);
-        mcontent.appendChild(mH4)
-
-        var mfooter = document.createElement('div')
-        mfooter.className = 'modal-footer'
-        modal.appendChild(mfooter)
-
-        var mclose = document.createElement('a')
-        mclose.setAttribute('class', 'modal-close waves-effect waves-green btn-flat')
-        mclose.href = '#!'
-        mclose.innerHTML = 'Close'
-        mfooter.appendChild(mclose)
-    }
-}
