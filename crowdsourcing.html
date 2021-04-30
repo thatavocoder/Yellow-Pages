@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    
+        <link href="CSS/index.css" rel="stylesheet">
+        <link href="CSS/navbar.css" rel="stylesheet">
+        <link href="CSS/slideshow.css" rel="stylesheet">
+        <link href="css/footer.css" rel="stylesheet">
+        <link href="breadcrumb.css" rel="stylesheet">
+        <link href="crowdsourcing.css" rel="stylesheet">
+        <title>Yellow Pages</title>
+
+        <script type="text/javascript">
+            top.visible_div_id = 'north';
+    
+            function toggle_visibility(id) {
+                var old_e = document.getElementById(top.visible_div_id);
+                old_e.style.display = 'none';
+                var new_e = document.getElementById(id);
+                console.log('new', new_e, 'block');
+                new_e.style.display = 'block';
+                top.visible_div_id = id;
+            }
+
+ 
+        </script>
+    </head>
+
+
+
+
+
+<body onload="toggle_visibility('left');">
+    <!--navbar-->
+    <div class="navbar-container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    Yellow Pages
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Scholarships.html">Scholarships</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li class="active"><a href="crowdsourcing.html">Contribute</a></li>
+                    <li><a href="faq.html">Q&A</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li class="sidenav-option" style="display: none;"><a href="index.html">Home</a></li>
+            <li class="sidenav-option"><a href="index.html">Home</a></li>
+            <li class="sidenav-option"><a href="Scholarships.html">Scholarships</a></li>
+            <li class="sidenav-option"><a href="loans.html">Loans</a></li>
+            <li class="sidenav-option"><a href="#">Books</a></li>
+            <li class="active sidenav-option"><a href="crowdsourcing.html">Contribute</a></li>
+            <li class="sidenav-option"><a href="faq.html">Q&A</a></li>
+            
+        </ul>
+    </div>
+    <!--form-->
+  
+    
+<div class="inform">
+    <p>Do u have wish to add any more information for our knowledge?<br>
+    
+    Well, then welcome to our page<br>
+    
+    Enter details you want us to know about so that others can also benefit from it
+    </p>
+    </div>
+       
+        
+    <div class="start">
+        <div onclick="toggle_visibility('left');">
+            <button class="submit-btn">Scholarship</button>
+        </div>
+
+        <div onclick="toggle_visibility('north');">
+            <button class="submit-btn">Loans</button>
+        </div>
+
+        <div onclick="toggle_visibility('east');">
+            <button class="submit-btn">Book Bank</button>
+        </div>
+
+        <div onclick="toggle_visibility('west');">
+            <button class="submit-btn">NGO</button>
+        </div>
+    </div>
+
+               <!--For scholarship-->
+        <div id="left" class="south" style="display: none;">
+            <form action="# ">
+                
+                        <div class="forminput">
+                            <label for="username"> Name of the scholarship</label>
+                            <input type="textbox" name="username" id="username"><br><br>
+
+
+
+                            <!-- <label for="eligibility"><b>Eligibility for scholarship :</b></label>
+                            <input type="textbox" name="eligibility" id="eligibility"><br><br> -->
+                            <label for="Amt"> Scholarship amount </label>
+                            <input type="textbox" name="Amt" id="Amt"><br><br>
+
+                            <label for="website">Website link</label>
+                            <input type="textbox" name="website" id="website"><br><br>
+
+                            <form action="#"><!-- Dropdown Trisgger -->
+                                <a class='dropdown-trigger btn drop drop-btn' href='#' data-target='dropdown1'>Eligibility</a><br><br>
+                              
+                                
+                                <!-- Dropdown Structure -->
+                                <ul id='dropdown1' class='dropdown-content drop'>
+                              
+                                  <p>
+                                      <label>
+                              
+                                          <input type="checkbox" />
+                                          <span style="color:black;">General</span>
+                              
+                                      </label>
+                                  </p>
+                                
+                                          <!-- <li><a input type="checkbox" href="#!">General</a></li>
+                                   -->
+                                  <li class="divider" tabindex="-1"></li>
+                                  <p>
+                                      <label>
+                              
+                                          <input type="checkbox" />
+                                          <span style="color:black;">SC</span>
+                                          
+                                      </label>
+                                  </p>
+                                
+                                  
+                                  <li class="divider" tabindex="-1"></li>
+                              
+                                  <p>
+                                  <label>
+                              
+                                      <input type="checkbox" />
+                                      <span style="color:black;">ST</span>
+                                      
+                                  </label>
+                                  </p>
+                              
+                                  <li class="divider" tabindex="-1"></li>
+                                  <p>
+                              
+                                  <label>
+                              
+                                      <input type="checkbox" />
+                                      <span style="color:black;">OBC</span>
+                                      
+                                  </label>
+                              
+                                  </p>
+                              
+                                  <li class="divider" tabindex="-1"></li>
+                              
+                                  <p><label>
+                              
+                                      <input type="checkbox" />
+                                      <span style="color:black;">Hindu</span>
+                                      
+                                  </label></p>
+                                  
+                              
+                                
+                                  <li class="divider" tabindex="-1"></li>
+                                  <p>
+                                      <label>
+                              
+                                          <input type="checkbox" />
+                                          <span style="color:black;">Jain</span>
+                                          
+                                      </label>
+                                  </p>
+                                
+                               
+                                  <li class="divider" tabindex="-1"></li>
+                              
+                                  <p>
+                                      <label>
+                              
+                                          <input type="checkbox" />
+                                          <span style="color:black;">Sikh</span>
+                                          
+                                      </label>
+                                  </p>
+                                 
+                                  
+                                  <li class="divider" tabindex="-1"></li>
+                                  <p> 
+                                       <label>
+                              
+                                      <input type="checkbox" />
+                                      <span style="color:black;">Muslim</span>
+                                      
+                                  </label>
+                              </p>
+                                
+                              
+                                  <li class="divider" tabindex="-1"></li>
+                                  <p>
+                                      <label>
+                              
+                                          <input type="checkbox" />
+                                          <span style="color:black;">Christian</span>
+                                          
+                                      </label>
+                                  </p>
+                                 
+                                  
+                                  <li class="divider" tabindex="-1"></li>
+                                  <p>
+                                      <label>
+                              
+                                          <input type="checkbox" />
+                                          <span style="color:black;">Parsi</span>
+                                          
+                                      </label>
+                                  </p>
+                                
+                                  
+                                  <li class="divider" tabindex="-1"></li>
+                                  
+                              
+                                </ul>
+                              </form> 
+                              <label for="description">Description</label>
+<input type="textarea" class="textarea" name="description" id="description"><br><br>
+
+                            <b>Your Details</b><br><br>
+
+                            <label for="name">Name</label>
+                            <input type="textbox" name="name" id="name"><br><br>
+
+                            <label for="phonenumber/email">Phone number/Email id</label>
+                            <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br>
+
+                           
+
+                       
+                        </div>
+               
+            </form>
+            <input type="submit" class="submit-btn" value="submit">
+        </div>
+
+        <div id="north" class="north" style="display: none;">
+            <div class="forminput">
+           
+            <label for="nme">Name of the source/bank</label>
+            <input type="textbox" name="nme" id="nme"><br><br>
+
+
+
+            <label for="interest">Is it interest free? If no, what are its interest rates?</label>
+            <input type="textbox" name="interest" id="interest"><br><br>
+
+            <b>Your Details</b><br><br>
+
+            <label for="name">Name</label>
+            <input type="textbox" name="name" id="name"><br><br>
+
+            <label for="phonenumber/email">Phone number/Email id</label>
+            <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br><br>
+
+
+
+            <input type="submit" class="submit-btn" value="submit">
+            
+            </div>
+
+        </div>
+
+
+        <div id="east" class="east" style="display: none;">
+            <div class="forminput">
+           
+            <label for="course">Name of the book bank</label>
+            <input type="textbox" name="name" id="name"><br><br>
+
+            <label for="NOA">Location of the book bank</label>
+            <input type="textbox" name="NOA" id="NOA"><br><br>
+
+            <label for="Source">Website link</label>
+            <input type="textbox" name="Source" id="Source"><br><br>
+
+            <b>Your Details</b><br><br>
+
+            <label for="name">Name</label>
+            <input type="textbox" name="name" id="name"><br><br>
+
+            <label for="phonenumber/email">Phone number/Email id</label>
+            <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br><br>
+
+            <input type="submit" class="submit-btn" value="submit">
+            
+            </div>
+            
+
+        </div>
+
+        <div id="west" class="west" style="display: none;">
+        
+            <div class="forminput">
+
+            <label for="nm">Name of the NGO</label>
+            <input type="textbox" name="nm" id="nm"><br><br>
+
+            <label for="website">Website link</label>
+            <input type="textbox" name="website" id="website"><br><br>
+
+            <label for="contact">Contact details</label>
+            <input type="textbox" name="contact" id="contact"><br><br>
+
+            <b>Your Details</b><br><br>
+
+            <label for="name">Name</label>
+            <input type="textbox" name="name" id="name"><br><br>
+
+            <label for="phonenumber/email">Phone number/Email id</label>
+            <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br><br>
+            
+
+          
+
+            
+
+            <input type="submit"class="submit-btn" value="submit">
+            </div>
+        
+
+        </div>
+
+
+        
+                    
+
+
+       
+
+        <footer class="page-footer" style="background-color: #ffcc00;">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <p class="white-text foot-head">Yellow Pages</p>
+                        <p class="foot-text">
+                            <span>Don't miss a beat!</span>
+                            <br> Join our mailing list to stay in loop about our upcoming scholarships and loans.
+                        </p>
+                        <form action="#">
+                            <input type="textbox" placeholder="First Name" class="foot-form">
+                            <input type="textbox" placeholder="Last Name" class="foot-form">
+                            <input type="textbox" placeholder="Email" class="foot-form">
+                            <input type="submit" value="Join" class="foot-form-submit teal lighten-2">
+                        </form>
+    
+                    </div>
+                    <div class="col l2 offset-l1 s6 foot-link">
+                        <h5 class="white-text">Company</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Testimonials</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Search</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l2 offset-l1 s6 foot-link">
+                        <h5 class="white-text">Help</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Help Center</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    ©Yellowpages 2021. All rights reserved.
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+        <script>
+                       
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, );
+  });
+        </script>
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="JS/navbar.js"></script>
+        <!-- <script src="crowdsourcing.js" type="text/javascript"></script> -->
+        </body>
+</html>
+    
