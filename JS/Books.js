@@ -172,6 +172,7 @@ function createCard(resp) {
                 }
                 console.log(scholarshipDetail)
                 modalTitle.innerHTML = scholarshipDetail.title
+                modalDetails.innerHTML = ''
                 for (var j = 0; j < displayItems.length; j++) {
                     var details = document.createElement('p')
                     var dethead = document.createElement('span')

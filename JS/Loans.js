@@ -194,7 +194,8 @@ function createCard(resp) {
                 }
                 console.log(scholarshipDetail)
                 modalTitle.innerHTML = scholarshipDetail.title
-                for (var j = 0; j <= displayItems.length; j++) {
+                modalDetails.innerHTML = ''
+                for (var j = 0; j < displayItems.length; j++) {
                     var details = document.createElement('p')
                     var dethead = document.createElement('span')
                     dethead.style.fontWeight = 'bold'
