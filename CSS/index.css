@@ -1,11 +1,13 @@
 .intro-container {
-    height: 80vh;
+    height: 70vh;
     width: 100%;
-    background-color: #ffca00;
+    background-color: #ff895b;
+    border-bottom: 0.3vmin solid black;
 }
 
 .intro-text,
 .intro-img {
+    margin-top: 5vmin;
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -13,20 +15,22 @@
 
 .intro-img img {
     width: 100%;
+    padding: 2vmin !important;
     height: auto;
 }
 
 .intro-head {
-    font-size: 6.5vmin;
+    font-size: 5vmin;
     font-weight: bold;
-    line-height: 7vmin;
+    color: #1f1f1f ;
 }
 
 .intro-para {
-    font-size: 2.7vmin;
-    color: rgb(100, 100, 100);
+    font-size: 3vmin;
+    color: #363636;
     position: relative;
     bottom: 2vmin;
+    font-family: Poppins;
 }
 
 .intro-btn {

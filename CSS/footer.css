@@ -1,50 +1,32 @@
 .page-footer {
-    position: relative;
-    top: 40vmin;
+    margin-top: 25vmin;
+    border-top: 0.3vmin solid black;
 }
 
 .foot-head {
-    font-size: 5vmin;
-    font-weight: bold;
-    line-height: 5vmin;
-    position: relative;
-    bottom: 3vmin;
-}
-
-.foot-text span {
-    font-size: 3vmin;
-    line-height: 3vmin;
-    color: black;
-    font-weight: bold;
-    position: relative;
-    bottom: 1vmin;
+    color: #1f1f1f;
+    font-family: Lobster;
 }
 
 .foot-text {
-    color: black;
-    position: relative;
-    bottom: 2vmin;
+    color: #2c2c2c;
 }
 
-.foot-form {
-    width: 15vmin;
-    height: 5vmin;
-    background-color: white;
-    border: none;
-    outline: none;
-    color: black;
-    margin-right: 0.7vmin;
+.foot-link a{
+    line-height: 3vmin;
+    color: #1f1f1f !important;
 }
 
-.foot-form-submit {
-    height: 5vmin;
-    width: 10vmin;
-    border-radius: 5vmin;
-    outline: none;
-    border: none;
+.page-footer a:hover{
+    color: rgb(255, 255, 255) !important;
+    text-decoration: underline black;
 }
 
-.foot-link {
-    position: relative;
-    top: 6vmin;
+.container{
+    color: #1f1f1f;
+    font-size: 2.5vmin;
+}
+
+.container a{
+    color: #1f1f1f;
 }

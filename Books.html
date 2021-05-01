@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
     <link href="CSS/navbar.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
@@ -26,38 +27,24 @@
     <div class="navbar-container">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">
-                    Yellow Pages
+                <a href="#" class="left brand-logo">
+                    ArchivEd
                 </a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down menu-list">
+                <ul id="nav-mobile" class="right menu-list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="Scholarships.html">Scholarships</a></li>
-                    <li><a href="Loans.html">Loans</a></li>
-                    <li class="active"><a href="Books.html">Books</a></li>
-                    <li><a href="NGOs.html">NGOs</a></li>
                     <li><a href="crowdsourcing.html">Contribute</a></li>
-                    <li><a href="faq.html">Q&A</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
                 </ul>
             </div>
-        </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li class="sidenav-option" style="display: none;"><a href="index.html">Home</a></li>
-            <li class="sidenav-option"><a href="index.html">Home</a></li>
-            <li class="sidenav-option"><a href="Scholarships.html">Scholarships</a></li>
-            <li class="sidenav-option"><a href="loans.html">Loans</a></li>
-            <li class="sidenav-option active"><a href="Books.html">Books</a></li>
-            <li class="sidenav-option"><a href="NGOs.html">NGOs</a></li>
-            <li class="sidenav-option"><a href="crowdsourcing.html">Contribute</a></li>
-            <li class="sidenav-option"><a href="faq.html">Q&A</a></li>
-        </ul>
-        <nav class="breadcrumb-container">
-            <div class="nav-wrapper breadcrumb-navwrapper">
-                <div class="col s12 breadcrumb-content">
-                    <a href="index.html">Home</a> >
-                    <a href="Books.html">Books</a>
-                </div>
+            <div class="nav-content">
+                <ul class="tabs row">
+                    <li class="tab col l2 s0"></li>
+                    <li class="tab col l2 s3"><a href="Scholarships.html">Scholarships</a></li>
+                    <li class="tab col l2 s3"><a href="loans.html">Loans</a></li>
+                    <li class="tab col l2 s3 active"><a href="Books.html">Bookbanks</a></li>
+                    <li class="tab col l2 s3"><a href="NGOs.html">NGOs</a></li>
+                    <li class="tab col l2 s0"></li>
+                </ul>
             </div>
         </nav>
     </div>
@@ -127,44 +114,28 @@
         </div>
     </div>
 
-    <footer class="page-footer" style="background-color: #ffca00;">
+    <footer class="page-footer" style="background-color: #ff895b;">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <p class="white-text foot-head">Yellow Pages</p>
+                <div class="col l6 s12 leftcontent center">
+                    <h5 class="foot-head">ArchivEd</h5>
                     <p class="foot-text">
-                        <span>Don't miss a beat!</span>
-                        <br> Join our mailing list to stay in loop about our upcoming scholarships and loans.
+                        An initiative by TMM
                     </p>
-                    <form action="#">
-                        <input type="textbox" placeholder="First Name" class="foot-form">
-                        <input type="textbox" placeholder="Last Name" class="foot-form">
-                        <input type="textbox" placeholder="Email" class="foot-form">
-                        <input type="submit" value="Join" class="foot-form-submit teal lighten-2">
-                    </form>
-
                 </div>
-                <div class="col l2 offset-l1 s6 foot-link">
-                    <h5 class="white-text">Company</h5>
+                <div class="col l4 offset-l2 s12 foot-link center">
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Testimonials</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Search</a></li>
-                    </ul>
-                </div>
-                <div class="col l2 offset-l1 s6 foot-link">
-                    <h5 class="white-text">Help</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Help Center</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                        <li><a href="#!">About</a></li>
+                        <li><a href="#!">Testimonials</a></li>
+                        <li><a href="#!">Contact us</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                ©Yellowpages 2021. All rights reserved.
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                ©ArchivEd 2021. All rights reserved.
+                <a class="right" href="crowdsourcing.html">Contribute to our cause</a>
             </div>
         </div>
     </footer>

@@ -51,7 +51,7 @@
 }
 
 .pagebtn {
-    background-color: #ffca00;
+    background-color: #ff895b;
     margin: 0.5vmin;
     position: relative;
     left: 50%;
@@ -76,4 +76,8 @@
 .modal-show {
     z-index: 100;
     visibility: visible;
+}
+
+.modal-trigger{
+    color: #ff895b !important;
 }
