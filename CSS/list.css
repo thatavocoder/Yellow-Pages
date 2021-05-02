@@ -1,16 +1,37 @@
+*{
+    color: #1f1f1f;
+}
+
+.card-container{
+    margin-top: -3vmin !important;
+    font-family: Poppins;
+}
+
 #maincontainer {
     border-left: 0.2vmin solid rgb(226, 226, 226);
+    padding-top: 3vmin;
 }
 
 .card-content {
     text-align: center;
+    padding: 0 !important;
+    position: relative;
+    text-transform: capitalize;
 }
 
 .cardtitle {
-    padding-bottom: 1vmin;
+    padding: 2vmin;
     margin-bottom: 3vmin;
     border-bottom: 0.2vmin solid rgb(226, 226, 226);
     line-height: 3.7vmin;
+    font-size: 2.5vmin;
+    font-family: Raleway;
+    background-color: #ffd180;
+    text-transform: capitalize;
+}
+
+.contentrow{
+    margin: 0 !important;
 }
 
 .cardimg {
@@ -21,15 +42,12 @@
 }
 
 .cardaward {
-    height: 9vmin;
-    line-height: 3.5vmin;
+    width: 100%;
+    height: auto;
+    padding: 2vmin;
+    font-size: 2.5vmin;
     border: 0.2vmin solid rgb(226, 226, 226);
     border-radius: 1vmin;
-    padding: 1vmin;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
 }
 
 .updated, .deadline {
@@ -46,23 +64,35 @@
 
 .pagination {
     margin: 0 !important;
-    padding: 2vmin;
+    padding-top: 3vmin !important;
     border-left: 0.2vmin solid rgb(226, 226, 226);
 }
 
 .pagebtn {
-    background-color: #ff895b;
-    margin: 0.5vmin;
+    background-color: #ffd180;
+    width: 5vmin;
+    margin-left: 0.5vmin;
+    margin-right: 0.5vmin;
     position: relative;
     left: 50%;
     transform: translate(-50%);
 }
 
 .searchbtn {
-    height: 4vmin;
-    width: 10vmin;
-    font-size: 1.5vmin;
-    line-height: 4vmin;
+    height: 5vmin;
+    width: 13vmin;
+    font-size: 2vmin;
+    line-height: 5vmin;
+    background-color: #ffd180;
+    color: #1f1f1f;
+}
+
+.searchbtn:hover{
+    background-color: #e2b973;
+}
+
+.searchbtn:focus{
+    background-color: #e2b973;
 }
 
 .modal {
@@ -79,5 +109,22 @@
 }
 
 .modal-trigger{
-    color: #ff895b !important;
+    color: #ffd180 !important;
+}
+
+.submitbtn{
+    height: 5vmin;
+    width: 13vmin;
+    font-size: 2vmin;
+    line-height: 5vmin;
+    background-color: #ffd180;
+    color: #1f1f1f;
+}
+
+.submitbtn:hover{
+    background-color: #e2b973;
+}
+
+.submitbtn:focus{
+    background-color: #e2b973;
 }

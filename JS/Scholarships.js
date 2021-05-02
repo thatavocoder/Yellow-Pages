@@ -132,7 +132,7 @@ function createCard(resp) {
             cardcontent.appendChild(title)
 
             var content = document.createElement('div')
-            content.setAttribute("class", "row")
+            content.setAttribute("class", "row contentrow")
             cardcontent.appendChild(content)
 
             var image = document.createElement('img')
@@ -145,7 +145,7 @@ function createCard(resp) {
             }
 
             var award = document.createElement('p')
-            award.setAttribute("class", "cardaward")
+            award.setAttribute("class", "cardaward truncate")
             award.innerHTML = `Amount: ${resp.results[i].award}`
             content.appendChild(award)
 
@@ -153,6 +153,8 @@ function createCard(resp) {
                 award.innerHTML = "Amount: Information not available"
                 content.appendChild(award)
             }
+
+            cardcontent.appendChild(document.createElement('br'))
 
             var updated = document.createElement('p')
             updated.setAttribute("class", "truncate updated")
@@ -164,8 +166,7 @@ function createCard(resp) {
                 content.appendChild(updated)
             }
 
-            var br = document.createElement('br')
-            cardcontent.appendChild(br)
+            cardcontent.appendChild(document.createElement('br'))
 
             var deadline = document.createElement('p')
             deadline.setAttribute("class", "truncate deadline")
@@ -176,6 +177,8 @@ function createCard(resp) {
                 deadline.innerHTML = "Deadline : Information not available"
                 content.appendChild(deadline)
             }
+
+            cardcontent.appendChild(document.createElement('br'))
 
             var action = document.createElement('div')
             action.setAttribute("class", "card-action")
@@ -235,11 +238,11 @@ function createPagination(count) {
             pageCont.appendChild(btn)
             var btna = document.createElement('a')
             btna.innerHTML = `${i}`
-            btna.setAttribute('class', 'pageBtn')
+            btna.setAttribute('class', 'pageButton')
             btn.appendChild(btna)
         }
     }
-    document.querySelectorAll('.pageBtn').forEach(item => {
+    document.querySelectorAll('.pageButton').forEach(item => {
         item.addEventListener('click', event => {
             getscholar(url, item.innerHTML)
         })

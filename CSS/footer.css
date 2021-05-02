@@ -1,10 +1,11 @@
 .page-footer {
     margin-top: 25vmin;
     border-top: 0.3vmin solid black;
+    background-color: #ffd180 !important;
 }
 
 .foot-head {
-    color: #1f1f1f;
+    color: #252525;
     font-family: Lobster;
 }
 
@@ -14,7 +15,7 @@
 
 .foot-link a{
     line-height: 3vmin;
-    color: #1f1f1f !important;
+    color: #252525 !important;
 }
 
 .page-footer a:hover{
@@ -23,10 +24,10 @@
 }
 
 .container{
-    color: #1f1f1f;
+    color: #252525;
     font-size: 2.3vmin;
 }
 
 .container a{
-    color: #1f1f1f;
+    color: #252525;
 }

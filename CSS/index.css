@@ -1,13 +1,14 @@
 .intro-container {
-    height: 70vh;
+    margin-top: 16vmin;
+    height: 60vh;
     width: 100%;
-    background-color: #ff895b;
+    background-color: #ffd180;
     border-bottom: 0.3vmin solid black;
+    font-family: Raleway;
 }
 
 .intro-text,
 .intro-img {
-    margin-top: 5vmin;
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -22,7 +23,8 @@
 .intro-head {
     font-size: 5vmin;
     font-weight: bold;
-    color: #1f1f1f ;
+    color: #252525 ;
+    padding-bottom: 5vmin;
 }
 
 .intro-para {
@@ -33,22 +35,7 @@
     font-family: Poppins;
 }
 
-.intro-btn {
-    width: 25vmin;
-    height: 7vmin;
-    line-height: 7vmin;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    border-bottom-left-radius: 20vmin;
-    border-top-left-radius: 20vmin;
-    border-bottom-right-radius: 20vmin;
-    border-top-right-radius: 20vmin;
-    position: relative;
-    bottom: 3vmin;
-}
-
-.section-head {
+/*.section-head {
     text-align: center;
     position: relative;
     top: 10vmin;
@@ -191,7 +178,7 @@ hr {
 .test-btn:active {
     color: black;
     border: 0.1vmin solid black;
-}
+}*/
 
 @media only screen and (max-width: 414px) {
     .intro-container {
@@ -202,7 +189,7 @@ hr {
         position: relative;
         top: 33%;
     }
-    .card-container {
+    /*.card-container {
         width: 95%;
     }
     .service-card {
@@ -225,5 +212,5 @@ hr {
         padding: 0;
         width: 32vmin;
         height: 25vmin;
-    }
+    }*/
 }

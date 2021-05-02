@@ -1,12 +1,8 @@
-*{
-    font-family: 'Raleway';
-}
-
 .brand-logo {
     margin-left: 7vmin;
     font-size: 5vmin !important;
     font-family: Lobster;
-    color: #1f1f1f !important;
+    color: #272727 !important;
 }
 
 nav {
@@ -16,8 +12,9 @@ nav {
     position: fixed;
     top: 0;
     z-index: 100;
-    background-color: #ff895ba8 !important;
+    background-color: #ffd180e0 !important;
     box-shadow: none;
+    font-family: 'Raleway' !important;
 }
 
 .tabs{
@@ -26,8 +23,8 @@ nav {
     height: 8vmin;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: #eeeeeea8 !important;
-    border-bottom: 0.3vmin solid rgb(0, 0, 0);
+    background-color: #ffd180e0 !important;
+    border-bottom: 0.3vmin solid #000000;
     box-shadow: 0.2vmin 0.2vmin 0.5vmin rgba(0, 0, 0, 0.637);
 }
 
@@ -36,8 +33,8 @@ nav {
 }
 
 .tabs li.active{
-    background-color: #ff895b28 !important;
-    border-bottom: 0.7vmin solid #ff895b !important;
+    background-color: #e2b972e0 !important;
+    border-bottom: 0.7vmin solid #f0c479 !important;
 }
 
 .tabs li.active a{
@@ -47,11 +44,10 @@ nav {
 
 .tab a{
     height: 8vmin !important;
-    background-color: #ececec8a;
-    border: 0.2vmin solid #c5c5c588;
+    background-color: transparent;
+    border: 0.1vmin solid #ffd180;
     border-radius: 0.3vmin;
-    box-shadow: 0.3vmin 0.3vmin 1vmin rgba(221, 221, 221, 0.548);
-    color: #1f1f1f !important;
+    color: #252525 !important;
     padding: 0 !important;
     margin: 0 !important;
     text-align: center !important;
@@ -60,18 +56,22 @@ nav {
 }
 
 .tabs li a:hover{
-    background-color: #ff895b28 !important;
+    background-color: #f0c479e0 !important;
 }
 
 .nav-wrapper {
-    border-bottom: 0.3vmin solid #000000;
+    border-bottom: 0.3vmin solid #ffd180c2;
 }
 
 .menu-list li a {
     font-size: 2.5vmin;
-    color: #1f1f1f;
+    color: #252525;
 }
 
 .active{
     font-weight: bold;
+}
+
+.tabs .row::after{
+    display: none;
 }
