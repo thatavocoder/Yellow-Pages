@@ -1,33 +1,33 @@
 .page-footer {
     margin-top: 25vmin;
     border-top: 0.3vmin solid black;
-    background-color: #ffd180 !important;
+    background-color: #ffef96 !important;
 }
 
 .foot-head {
-    color: #252525;
+    color: #50394c;
     font-family: Lobster;
 }
 
 .foot-text {
-    color: #2c2c2c;
+    color: #50394c;
 }
 
 .foot-link a{
     line-height: 3vmin;
-    color: #252525 !important;
+    color: #50394c !important;
 }
 
 .page-footer a:hover{
-    color: rgb(255, 255, 255) !important;
+    color: rgb(179, 179, 179) !important;
     text-decoration: underline black;
 }
 
 .container{
-    color: #252525;
+    color: #50394c;
     font-size: 2.3vmin;
 }
 
 .container a{
-    color: #252525;
+    color: #50394c;
 }

@@ -15,6 +15,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <link href="CSS/navbar.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
@@ -64,27 +65,29 @@
                 <form id="filterForm">
                     <h6>Filters</h6>
                     <label for="state">State/ Union Territory:</label>
-                    <input type="text" list="states" name="state" id="state" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="states"></datalist>
+                    <select id="states">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="category">Category:</label>
-                    <input list="categories" name="category" id="category" autocomplete="off" style="font-size: 2vmin;">
-                    <datalist id="categories"></datalist>
+                    <select id="categories">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="type">Type:</label>
-                    <input type="text" list="types" name="type" id="type" autocomplete="off" style="font-size: 2vmin;">
-                    <datalist id="types"></datalist>
+                    <select id="types">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="religion">Religion:</label>
-                    <input type="text" list="religions" name="religion" id="religion" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="religions"></datalist>
+                    <select id="religions">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="gender">Gender:</label>
-                    <input type="text" list="genders" name="gender" id="gender" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="genders"></datalist>
+                    <select id="genders">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <button class="btn waves-effect waves-light submitbtn" name="action">Submit</button>
 
@@ -125,7 +128,7 @@
         </div>
     </div>
 
-    <footer class="page-footer" style="background-color: #ffd180;">
+    <footer class="page-footer" style="background-color: #ffef96;">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12 leftcontent center">

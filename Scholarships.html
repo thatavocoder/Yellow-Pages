@@ -63,40 +63,43 @@
                     <button class="btn waves-effect waves-light searchbtn" type="submit">Search</button>
                 </form>
 
-                <form id="filterForm">
+                <form id="filterForm row">
                     <h6>Filters</h6>
-                    <label for="state">State/ Union Territory:</label>
-                    <input type="text" list="states" name="state" id="state" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="states"></datalist>
+
+                    <label>State/ Union Territory:</label>
+                    <select id="states">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="category">Category:</label>
-                    <input list="categories" name="category" id="category" autocomplete="off" style="font-size: 2vmin;">
-                    <datalist id="categories"></datalist>
+                    <select id="categories">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="class">Class:</label>
-                    <input type="text" list="classes" name="class" id="class" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="classes"></datalist>
+                    <select id="classes">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="type">Type:</label>
-                    <input type="text" list="types" name="type" id="type" autocomplete="off" style="font-size: 2vmin;">
-                    <datalist id="types"></datalist>
+                    <select id="types">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="religion">Religion:</label>
-                    <input type="text" list="religions" name="religion" id="religion" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="religions"></datalist>
+                    <select id="religions">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="course">Course:</label>
-                    <input type="text" list="courses" name="course" id="course" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="courses"></datalist>
+                    <select id="courses">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="gender">Gender:</label>
-                    <input type="text" list="genders" name="gender" id="gender" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="genders"></datalist>
+                    <select id="genders">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <button class="btn waves-effect waves-light submitbtn" name="action">Submit</button>
 
@@ -138,7 +141,7 @@
     </div>
 
 
-    <footer class="page-footer" style="background-color: #ffd180;">
+    <footer class="page-footer" style="background-color: #f4e1d2;">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12 leftcontent center">

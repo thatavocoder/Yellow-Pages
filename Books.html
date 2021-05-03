@@ -13,6 +13,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <link href="CSS/navbar.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
@@ -62,18 +63,19 @@
                 <form id="filterForm">
                     <h6>Filters</h6>
                     <label for="state">State/ Union Territory:</label>
-                    <input type="text" list="states" name="state" id="state" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="states"></datalist>
+                    <select id="states">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="district">District:</label>
-                    <input type="text" list="districts" name="district" id="district" autocomplete="off" style="font-size: 2vmin;">
-                    <datalist id="districts"></datalist>
+                    <select id="districts">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="book">Books:</label>
-                    <input type="text" list="books" name="book" id="book" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="books"></datalist>
+                    <select id="books">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <button class="btn waves-effect waves-light submitbtn" name="action">Submit</button>
 
@@ -114,7 +116,7 @@
         </div>
     </div>
 
-    <footer class="page-footer" style="background-color: #ffd180;">
+    <footer class="page-footer" style="background-color: #ffef96;">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12 leftcontent center">

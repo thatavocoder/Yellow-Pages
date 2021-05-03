@@ -2,7 +2,7 @@
     margin-top: 16vmin;
     height: 60vh;
     width: 100%;
-    background-color: #ffd180;
+    background-color: #b2b2b2;
     border-bottom: 0.3vmin solid black;
     font-family: Raleway;
 }
@@ -23,13 +23,13 @@
 .intro-head {
     font-size: 5vmin;
     font-weight: bold;
-    color: #252525 ;
+    color: #50394c ;
     padding-bottom: 5vmin;
 }
 
 .intro-para {
     font-size: 3vmin;
-    color: #363636;
+    color: #50394c;
     position: relative;
     bottom: 2vmin;
     font-family: Poppins;

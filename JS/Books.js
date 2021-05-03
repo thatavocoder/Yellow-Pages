@@ -4,7 +4,7 @@ var page = 1
 var modal = document.querySelector('.modal')
 var modalTitle = document.querySelector('.modal-title')
 var modalDetails = document.querySelector('.modal-body')
-var displayItems = ['books', 'state', 'district', 'address', 'content', 'contact', 'site_url']
+var displayItems = ['updated_on', 'books', 'state', 'district', 'address', 'content', 'contact', 'site_url']
 
 getscholar(url, page = 1)
     .catch(error => {
@@ -104,7 +104,7 @@ function createCard(resp) {
             cardcontent.appendChild(title)
 
             var content = document.createElement('div')
-            content.setAttribute("class", "row")
+            content.setAttribute("class", "row contentrow")
             cardcontent.appendChild(content)
 
             var image = document.createElement('img')
@@ -117,37 +117,39 @@ function createCard(resp) {
             }
 
             var award = document.createElement('p')
-            award.setAttribute("class", "cardaward")
-            award.innerHTML = `Amount: ${resp.results[i].award}`
+            award.setAttribute("class", "cont1 truncate")
+            award.innerHTML = `Books: ${resp.results[i].books}`
             content.appendChild(award)
 
-            if (resp.results[i].award == null) {
-                award.innerHTML = "Amount: Information not available"
+            if (resp.results[i].books == null) {
+                award.innerHTML = "Books: Information not available"
                 content.appendChild(award)
             }
 
-            var updated = document.createElement('p')
-            updated.setAttribute("class", "truncate updated")
-            updated.innerHTML = `Updated on : ${resp.results[i].updated_on}`
-            cardcontent.appendChild(updated)
+            content.appendChild(document.createElement('br'))
+
+            var interest = document.createElement('p')
+            interest.setAttribute("class", "truncate cont2")
+            interest.innerHTML = `District: ${resp.results[i].district}`
+            cardcontent.appendChild(interest)
+            if (resp.results[i].district == null) {
+                award.innerHTML = "District: Information not available"
+                content.appendChild(interest)
+            }
+
+            cardcontent.appendChild(document.createElement('br'))
+
+            var updt = document.createElement('p')
+            updt.setAttribute("class", "truncate cont3")
+            updt.innerHTML = `Updated on: ${resp.results[i].updated_on}`
+            cardcontent.appendChild(updt)
 
             if (resp.results[i].updated_on == null) {
-                updated.innerHTML = "Updated on : Information not available"
-                content.appendChild(updated)
+                updt.innerHTML = "Deadline : Information not available"
+                cardcontent.appendChild(updt)
             }
 
-            var br = document.createElement('br')
-            cardcontent.appendChild(br)
-
-            var deadline = document.createElement('p')
-            deadline.setAttribute("class", "truncate deadline")
-            deadline.innerHTML = `Deadline : ${resp.results[i].deadline}`
-            cardcontent.appendChild(deadline)
-
-            if (resp.results[i].deadline == null) {
-                deadline.innerHTML = "Deadline : Information not available"
-                content.appendChild(deadline)
-            }
+            cardcontent.appendChild(document.createElement('br'))
 
             var action = document.createElement('div')
             action.setAttribute("class", "card-action")
@@ -172,16 +174,18 @@ function createCard(resp) {
                 }
                 console.log(scholarshipDetail)
                 modalTitle.innerHTML = scholarshipDetail.title
+                modalTitle.style.textTransform = 'capitalize'
                 modalDetails.innerHTML = ''
                 for (var j = 0; j < displayItems.length; j++) {
                     var details = document.createElement('p')
                     var dethead = document.createElement('span')
                     dethead.style.fontWeight = 'bold'
+                    dethead.style.textTransform = 'uppercase'
                     dethead.innerHTML = `${displayItems[j]}: `
                     details.appendChild(dethead)
                     var deets = document.createElement('span')
                     deets.innerHTML = scholarshipDetail[displayItems[j]]
-                    details.appendChild(deets)                    
+                    details.appendChild(deets)
                     modalDetails.appendChild(details)
                 }
             })
@@ -228,7 +232,7 @@ search.addEventListener('submit', (e) => {
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {
-            url=url
+            url = url
         }
 
         url += `${property}=${filterVal[property]}&`

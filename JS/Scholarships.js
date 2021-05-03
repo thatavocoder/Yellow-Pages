@@ -107,7 +107,7 @@ function createCard(resp) {
     main.innerHTML = ''
 
     if (resp.results.length == 0) {
-        main.innerHTML = 'Oops! Nothing to show!'
+        main.innerHTML = 'Oops! Nothing to show!'   
         main.style.textAlign = 'center'
     }
     else {
@@ -145,7 +145,7 @@ function createCard(resp) {
             }
 
             var award = document.createElement('p')
-            award.setAttribute("class", "cardaward truncate")
+            award.setAttribute("class", "cont1 truncate")
             award.innerHTML = `Amount: ${resp.results[i].award}`
             content.appendChild(award)
 
@@ -157,25 +157,25 @@ function createCard(resp) {
             cardcontent.appendChild(document.createElement('br'))
 
             var updated = document.createElement('p')
-            updated.setAttribute("class", "truncate updated")
-            updated.innerHTML = `Updated on : ${resp.results[i].updated_on}`
+            updated.setAttribute("class", "truncate cont2")
+            updated.innerHTML = `Class : ${resp.results[i].sclass}`
             cardcontent.appendChild(updated)
 
             if (resp.results[i].updated_on == null) {
-                updated.innerHTML = "Updated on : Information not available"
-                content.appendChild(updated)
+                updated.innerHTML = "Class : Information not available"
+                cardcontent.appendChild(updated)
             }
 
             cardcontent.appendChild(document.createElement('br'))
 
             var deadline = document.createElement('p')
-            deadline.setAttribute("class", "truncate deadline")
+            deadline.setAttribute("class", "truncate cont3")
             deadline.innerHTML = `Deadline : ${resp.results[i].deadline}`
             cardcontent.appendChild(deadline)
 
             if (resp.results[i].deadline == null) {
                 deadline.innerHTML = "Deadline : Information not available"
-                content.appendChild(deadline)
+                cardcontent.appendChild(deadline)
             }
 
             cardcontent.appendChild(document.createElement('br'))
@@ -203,11 +203,13 @@ function createCard(resp) {
                 }
                 console.log(scholarshipDetail)
                 modalTitle.innerHTML = scholarshipDetail.title
+                modalTitle.style.textTransform = 'capitalize'
                 modalDetails.innerHTML = ''
                 for (var j = 0; j < displayItems.length; j++) {
                     var details = document.createElement('p')
                     var dethead = document.createElement('span')
                     dethead.style.fontWeight = 'bold'
+                    dethead.style.textTransform = 'uppercase'
                     dethead.innerHTML = `${displayItems[j]}: `
                     details.appendChild(dethead)
                     var deets = document.createElement('span')
@@ -235,6 +237,7 @@ function createPagination(count) {
         for (var i = 1; i <= totalPages; i++) {
             btn = document.createElement('li')
             btn.setAttribute('class', 'waves-effect pagebtn')
+            btn.class = `${i}`
             pageCont.appendChild(btn)
             var btna = document.createElement('a')
             btna.innerHTML = `${i}`

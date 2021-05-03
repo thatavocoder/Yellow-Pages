@@ -13,6 +13,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <link href="CSS/navbar.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
@@ -62,33 +63,33 @@
                 <form id="filterForm">
                     <h6>Filters</h6>
                     <label for="state">State/ Union Territory:</label>
-                    <input type="text" list="states" name="state" id="state" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="states"></datalist>
+                    <select id="states">
+                    </select>
 
                     <label for="category">Category:</label>
-                    <input list="categories" name="category" id="category" autocomplete="off" style="font-size: 2vmin;">
-                    <datalist id="categories"></datalist>
+                    <select id="categories">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="district">District:</label>
-                    <input type="text" list="districts" name="district" id="district" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="district"></datalist>
+                   <select id="district">
+                    <option value="" selected>All</option>
+                   </select>
 
                     <label for="loan_amount">Loan Amount:</label>
-                    <input type="text" list="loan_amounts" name="loan_amount" id="loan_amount" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="loan_amounts"></datalist>
+                    <select id="loan_amounts">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="religion">Religion:</label>
-                    <input type="text" list="religions" name="religion" id="religion" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="religions"></datalist>
+                    <select id="religions">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label for="country">Country:</label>
-                    <input type="text" list="countries" name="country" id="country" autocomplete="off"
-                        style="font-size: 2vmin;">
-                    <datalist id="countries"></datalist>
+                    <select id="countries">
+                        <option value="" selected>All</option>
+                    </select>
 
                     <label>
                         <input type="checkbox" name="interest" id="interest" style="font-size: 2vmin;" />
@@ -134,7 +135,7 @@
         </div>
     </div>
 
-    <footer class="page-footer" style="background-color: #ffd180;">
+    <footer class="page-footer" style="background-color: #ffef96;">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12 leftcontent center">

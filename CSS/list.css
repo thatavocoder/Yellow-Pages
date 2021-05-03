@@ -1,5 +1,9 @@
 *{
-    color: #1f1f1f;
+    color: #50394c;
+}
+
+select{
+    display: unset !important;
 }
 
 .card-container{
@@ -13,7 +17,7 @@
 }
 
 .card-content {
-    text-align: center;
+    text-align: left !important;
     padding: 0 !important;
     position: relative;
     text-transform: capitalize;
@@ -22,12 +26,13 @@
 .cardtitle {
     padding: 2vmin;
     margin-bottom: 3vmin;
-    border-bottom: 0.2vmin solid rgb(226, 226, 226);
+    border-bottom: 0.2vmin solid #e2e2e2;
     line-height: 3.7vmin;
     font-size: 2.5vmin;
-    font-family: Raleway;
-    background-color: #ffd180;
-    text-transform: capitalize;
+    font-family: Raleway !important;
+    background-color: #b2b2b2;
+    text-transform: capitalize !important;
+    color: #50394c !important;
 }
 
 .contentrow{
@@ -41,21 +46,20 @@
     margin-right: 4vmin;
 }
 
-.cardaward {
+.cont1 {
     width: 100%;
     height: auto;
-    padding: 2vmin;
+    padding: 0.5vmin !important;
+    padding-left: 2vmin !important;
     font-size: 2.5vmin;
-    border: 0.2vmin solid rgb(226, 226, 226);
-    border-radius: 1vmin;
 }
 
-.updated, .deadline {
+.cont2, .cont3 {
     width: 100%;
     height: auto;
-    padding: 2vmin;
-    border: 0.2vmin solid rgb(226, 226, 226);
-    border-radius: 1vmin;
+    padding: 0.5vmin;
+    padding-left: 2vmin;
+    font-size: 2.5vmin;
 }
 
 .card-action {
@@ -69,7 +73,7 @@
 }
 
 .pagebtn {
-    background-color: #ffd180;
+    background-color: #b2b2b2;
     width: 5vmin;
     margin-left: 0.5vmin;
     margin-right: 0.5vmin;
@@ -78,21 +82,29 @@
     transform: translate(-50%);
 }
 
+.pagebtn a{
+    color: #50394c !important;
+}
+
+.pagebtn:active{
+    background-color: #ffef96 !important;
+}
+
 .searchbtn {
     height: 5vmin;
     width: 13vmin;
     font-size: 2vmin;
     line-height: 5vmin;
-    background-color: #ffd180;
-    color: #1f1f1f;
+    background-color: #b2b2b2;
+    color: #50394c;
 }
 
 .searchbtn:hover{
-    background-color: #e2b973;
+    background-color: #b2b2b2;
 }
 
 .searchbtn:focus{
-    background-color: #e2b973;
+    background-color: #b2b2b2;
 }
 
 .modal {
@@ -109,7 +121,7 @@
 }
 
 .modal-trigger{
-    color: #ffd180 !important;
+    color: #b2b2b2 !important;
 }
 
 .submitbtn{
@@ -117,14 +129,18 @@
     width: 13vmin;
     font-size: 2vmin;
     line-height: 5vmin;
-    background-color: #ffd180;
-    color: #1f1f1f;
+    background-color: #b2b2b2;
+    color: #50394c;
 }
 
 .submitbtn:hover{
-    background-color: #e2b973;
+    background-color: #b2b2b2;
 }
 
 .submitbtn:focus{
-    background-color: #e2b973;
+    background-color: #b2b2b2;
+}
+
+.pagebtnactive{
+    background-color: #b2b2b2;
 }
