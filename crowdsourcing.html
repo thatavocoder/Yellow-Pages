@@ -18,16 +18,16 @@
 
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <link href="CSS/index.css" rel="stylesheet">
     <link href="CSS/navbar.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
-    <link href="css/breadcrumb.css" rel="stylesheet">
     <link href="css/crowdsourcing.css" rel="stylesheet">
     <title>Yellow Pages - Contribute</title>
 </head>
 
-<body onload="toggle_visibility('left');">
+<body onload="toggle_visibility('');">
 
     <div class="navbar-container">
         <nav>
@@ -54,268 +54,286 @@
         </nav>
     </div>
 
-
     <div class="inform">
-        <p>Do u have wish to add any more information for our knowledge?<br>
-
-            Well, then welcome to our page<br>
-
-            Enter details you want us to know about so that others can also benefit from it
+        <h4>Contribute to Our Cause!</h4>
+        <p>Know something that our researchers aren't aware of? Let us know.
+            <br />Click on the button about which you have information and fill a small form.
         </p>
     </div>
 
-
     <div class="start">
         <div onclick="toggle_visibility('left');">
-            <button class="submit-btn">Scholarship</button>
+            <button class="waves-effect waves-light btn optbtn">Scholarship</button>
         </div>
-
         <div onclick="toggle_visibility('north');">
-            <button class="submit-btn">Loans</button>
+            <button class="waves-effect waves-light btn optbtn">Loans</button>
         </div>
-
         <div onclick="toggle_visibility('east');">
-            <button class="submit-btn">Book Bank</button>
+            <button class="waves-effect waves-light btn optbtn">Book Bank</button>
         </div>
-
         <div onclick="toggle_visibility('west');">
-            <button class="submit-btn">NGO</button>
+            <button class="waves-effect waves-light btn optbtn">NGO</button>
         </div>
     </div>
 
-    <!--For scholarship-->
     <div id="left" class="south" style="display: none;">
         <form action="# ">
-
             <div class="forminput">
-                <label for="username"> Name of the scholarship</label>
-                <input type="textbox" name="username" id="username"><br><br>
+                <h5 class="deetsname">Scholarship Details</h5>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., Kind Scholarship Program" id="scholname" type="text" class="validate">
+                        <label for="scholname">Scholarship Name:</label>
+                    </div>
 
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., ₹15000" id="scholamt" type="number" class="validate">
+                        <label for="scholamt">Scholarship Amount:</label>
+                    </div>
 
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., phone number, email, website" id="scholcontact" type="text"
+                            class="validate">
+                        <label for="scholcontact">Scholarship contact info:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <select multiple>
+                            <optgroup label="Religion">
+                                <option value="Hindu">Hindu</option>
+                                <option value="Muslim">Muslim</option>
+                                <option value="Christian">Christian</option>
+                                <option value="Parsi">Parsi</option>
+                            </optgroup>
+                            <optgroup label="Course">
+                                <option value="School">School</option>
+                                <option value="Junior College">Junior College</option>
+                                <option value="UG">UG</option>
+                                <option value="PG">PG</option>
+                                <option value="PhD">PhD</option>
+                            </optgroup>
+                            <optgroup label="Type">
+                                <option value="govt">Government</option>
+                                <option value="private">Private</option>
+                            </optgroup>
+                        </select>
+                        <label>Eligibility:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="scholdesc" class="materialize-textarea"
+                            placeholder="Eg.,Eligibility, Location, contact, how to apply, etc."></textarea>
+                        <label for="scholdesc">Scholarship Description:</label>
+                    </div>
+                </div>
+                <h5>Your Details</h5>
+                <p>(Giving your details is optional. They will be completely protected and used to contact you
+                    only if we are unable to find information on the lead that you provide. We don't spam!)</p>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., Harry Potter" id="name" type="text" class="validate">
+                        <label for="name">Name:</label>
+                    </div>
 
-                <!-- <label for="eligibility"><b>Eligibility for scholarship :</b></label>
-                            <input type="textbox" name="eligibility" id="eligibility"><br><br> -->
-                <label for="Amt"> Scholarship amount </label>
-                <input type="textbox" name="Amt" id="Amt"><br><br>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., harrypotter@hogwarts.com" id="email" type="email" class="validate">
+                        <label for="email">Email-id:</label>
+                    </div>
 
-                <label for="website">Website link</label>
-                <input type="textbox" name="website" id="website"><br><br>
-
-                <form action="#">
-                    <!-- Dropdown Trisgger -->
-                    <a class='dropdown-trigger btn drop drop-btn' href='#'
-                        data-target='dropdown1'>Eligibility</a><br><br>
-
-
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown1' class='dropdown-content drop'>
-
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">General</span>
-
-                            </label>
-                        </p>
-
-                        <!-- <li><a input type="checkbox" href="#!">General</a></li>
-                                   -->
-                        <li class="divider" tabindex="-1"></li>
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">SC</span>
-
-                            </label>
-                        </p>
-
-
-                        <li class="divider" tabindex="-1"></li>
-
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">ST</span>
-
-                            </label>
-                        </p>
-
-                        <li class="divider" tabindex="-1"></li>
-                        <p>
-
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">OBC</span>
-
-                            </label>
-
-                        </p>
-
-                        <li class="divider" tabindex="-1"></li>
-
-                        <p><label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">Hindu</span>
-
-                            </label></p>
-
-
-
-                        <li class="divider" tabindex="-1"></li>
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">Jain</span>
-
-                            </label>
-                        </p>
-
-
-                        <li class="divider" tabindex="-1"></li>
-
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">Sikh</span>
-
-                            </label>
-                        </p>
-
-
-                        <li class="divider" tabindex="-1"></li>
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">Muslim</span>
-
-                            </label>
-                        </p>
-
-
-                        <li class="divider" tabindex="-1"></li>
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">Christian</span>
-
-                            </label>
-                        </p>
-
-
-                        <li class="divider" tabindex="-1"></li>
-                        <p>
-                            <label>
-
-                                <input type="checkbox" />
-                                <span style="color:black;">Parsi</span>
-
-                            </label>
-                        </p>
-
-
-                        <li class="divider" tabindex="-1"></li>
-
-
-                    </ul>
-                </form>
-                <label for="description">Description</label>
-                <input type="textarea" class="textarea" name="description" id="description"><br><br>
-
-                <b>Your Details</b><br><br>
-
-                <label for="name">Name</label>
-                <input type="textbox" name="name" id="name"><br><br>
-
-                <label for="phonenumber/email">Phone number/Email id</label>
-                <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br>
-
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., 9876543210" id="email" type="tel" pattern="[0-9]{10}" class="validate">
+                        <label for="email">Contact Number (10 digits):</label>
+                    </div>
+                </div>
+                <input type="submit" class="waves-effect waves-light btn optbtn submitbtn" value="submit">
             </div>
-
         </form>
-        <input type="submit" class="submit-btn" value="submit">
     </div>
 
     <div id="north" class="north" style="display: none;">
-        <div class="forminput">
+        <form>
+            <div class="forminput">
+                <h5 class="deetsname">Loan Details</h5>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., ABC trust" id="loanname" type="text" class="validate">
+                        <label for="loanname">Name of the source/bank:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., 1%" id="loanint" type="text" class="validate">
+                        <label for="loanint">Interest-free/ Interest Rate:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., phone number, email, website" id="scholcontact" type="text"
+                            class="validate">
+                        <label for="loancontact">Loan contact info:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <select multiple>
+                            <optgroup label="Religion">
+                                <option value="Hindu">Hindu</option>
+                                <option value="Muslim">Muslim</option>
+                                <option value="Christian">Christian</option>
+                                <option value="Parsi">Parsi</option>
+                            </optgroup>
+                            <optgroup label="Course">
+                                <option value="School">School</option>
+                                <option value="Junior College">Junior College</option>
+                                <option value="UG">UG</option>
+                                <option value="PG">PG</option>
+                                <option value="PhD">PhD</option>
+                            </optgroup>
+                            <optgroup label="Type">
+                                <option value="govt">Government</option>
+                                <option value="private">Private</option>
+                            </optgroup>
+                        </select>
+                        <label>Eligibility:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="loandesc" class="materialize-textarea"
+                            placeholder="Eg.,Eligibility, Location, contact, how to apply, etc."></textarea>
+                        <label for="loandesc">Loan Description:</label>
+                    </div>
+                </div>
+                <h5>Your Details</h5>
+                <p>(Giving your details is optional. Your details will be completely protected and used to contact you
+                    only if we are unable to find information on the lead that you provide.)</p>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., Harry Potter" id="name" type="text" class="validate">
+                        <label for="name">Name:</label>
+                    </div>
 
-            <label for="nme">Name of the source/bank</label>
-            <input type="textbox" name="nme" id="nme"><br><br>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., harrypotter@hogwarts.com" id="email" type="email" class="validate">
+                        <label for="email">Email-id:</label>
+                    </div>
 
-
-
-            <label for="interest">Is it interest free? If no, what are its interest rates?</label>
-            <input type="textbox" name="interest" id="interest"><br><br>
-
-            <b>Your Details</b><br><br>
-
-            <label for="name">Name</label>
-            <input type="textbox" name="name" id="name"><br><br>
-
-            <label for="phonenumber/email">Phone number/Email id</label>
-            <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br><br>
-            <input type="submit" class="submit-btn" value="submit">
-
-        </div>
-
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., 9876543210" id="email" type="tel" pattern="[0-9]{10}" class="validate">
+                        <label for="email">Contact Number (10 digits):</label>
+                    </div>
+                </div>
+                <input type="submit" class="waves-effect waves-light btn optbtn submitbtn" value="submit">
+            </div>
+        </form>
     </div>
 
-
     <div id="east" class="east" style="display: none;">
-        <div class="forminput">
+        <form>
+            <div class="forminput">
+                <h5 class="deetsname">Bookbank Details</h5>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., ABC trust" id="bbname" type="text" class="validate">
+                        <label for="bbname">Name of the Bookbank:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., Dadar (West), Mumbai" id="bbloc" type="text" class="validate">
+                        <label for="bbloc">Bookbank Location:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., phone number, email, website" id="bbcontact" type="text"
+                            class="validate">
+                        <label for="bbcontact">Bookbank contact info:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="bbdesc" class="materialize-textarea"
+                            placeholder="Eg.,Eligibility, Location, contact, how to apply, etc."></textarea>
+                        <label for="bbdesc">Bookbank Description:</label>
+                    </div>
+                </div>
+                <h5>Your Details</h5>
+                <p>(Giving your details is optional. Your details will be completely protected and used to contact you
+                    only if we are unable to find information on the lead that you provide.)</p>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., Harry Potter" id="name" type="text" class="validate">
+                        <label for="name">Name:</label>
+                    </div>
 
-            <label for="course">Name of the book bank</label>
-            <input type="textbox" name="name" id="name"><br><br>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., harrypotter@hogwarts.com" id="email" type="email" class="validate">
+                        <label for="email">Email-id:</label>
+                    </div>
 
-            <label for="NOA">Location of the book bank</label>
-            <input type="textbox" name="NOA" id="NOA"><br><br>
-
-            <label for="Source">Website link</label>
-            <input type="textbox" name="Source" id="Source"><br><br>
-
-            <b>Your Details</b><br><br>
-
-            <label for="name">Name</label>
-            <input type="textbox" name="name" id="name"><br><br>
-
-            <label for="phonenumber/email">Phone number/Email id</label>
-            <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br><br>
-
-            <input type="submit" class="submit-btn" value="submit">
-
-        </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., 9876543210" id="email" type="tel" pattern="[0-9]{10}" class="validate">
+                        <label for="email">Contact Number (10 digits):</label>
+                    </div>
+                </div>
+                <input type="submit" class="waves-effect waves-light btn optbtn submitbtn" value="submit">
+            </div>
+        </form>
     </div>
 
     <div id="west" class="west" style="display: none;">
+        <form>
+            <div class="forminput">
+                <h5 class="deetsname">NGO Details</h5>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., ABC Organisation" id="ngoname" type="text" class="validate">
+                        <label for="ngoname">Name of the NGO:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., Dadar(West), Mumbai" id="ngoloc" type="text" class="validate">
+                        <label for="ngoloc">NGO Location:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., phone number, email, website" id="ngocontact" type="text"
+                            class="validate">
+                        <label for="ngocontact">NGO contact info:</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <select multiple>
+                            <optgroup label="Religion">
+                                <option value="Hindu">Hindu</option>
+                                <option value="Muslim">Muslim</option>
+                                <option value="Christian">Christian</option>
+                                <option value="Parsi">Parsi</option>
+                            </optgroup>
+                            <optgroup label="Course">
+                                <option value="School">School</option>
+                                <option value="Junior College">Junior College</option>
+                                <option value="UG">UG</option>
+                                <option value="PG">PG</option>
+                                <option value="PhD">PhD</option>
+                            </optgroup>
+                            <optgroup label="Type">
+                                <option value="govt">Government</option>
+                                <option value="private">Private</option>
+                            </optgroup>
+                        </select>
+                        <label>Eligibility:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="ngodesc" class="materialize-textarea"
+                            placeholder="Eg.,Eligibility, Location, contact, how to apply, etc."></textarea>
+                        <label for="ngodesc">Bookbank Description:</label>
+                    </div>
+                </div>
+                <h5>Your Details</h5>
+                <p>(Giving your details is optional. Your details will be completely protected and used to contact you
+                    only if we are unable to find information on the lead that you provide.)</p>
+                <div class="row">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., Harry Potter" id="name" type="text" class="validate">
+                        <label for="name">Name:</label>
+                    </div>
 
-        <div class="forminput">
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., harrypotter@hogwarts.com" id="email" type="email" class="validate">
+                        <label for="email">Email-id:</label>
+                    </div>
 
-            <label for="nm">Name of the NGO</label>
-            <input type="textbox" name="nm" id="nm"><br><br>
-
-            <label for="website">Website link</label>
-            <input type="textbox" name="website" id="website"><br><br>
-
-            <label for="contact">Contact details</label>
-            <input type="textbox" name="contact" id="contact"><br><br>
-
-            <b>Your Details</b><br><br>
-
-            <label for="name">Name</label>
-            <input type="textbox" name="name" id="name"><br><br>
-
-            <label for="phonenumber/email">Phone number/Email id</label>
-            <input type="textbox" name="phonenumber/email" id="phonenumber/email"><br><br><br>
-            <input type="submit" class="submit-btn" value="submit">
-        </div>
+                    <div class="input-field col l6 m6 s12">
+                        <input placeholder="Eg., 9876543210" id="email" type="tel" pattern="[0-9]{10}" class="validate">
+                        <label for="email">Contact Number (10 digits):</label>
+                    </div>
+                </div>
+                <input type="submit" class="waves-effect waves-light btn optbtn submitbtn" value="submit">
+            </div>
+        </form>
     </div>
 
     <footer class="page-footer" style="background-color: #ffef96;">
@@ -344,18 +362,16 @@
         </div>
     </footer>
 
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.dropdown-trigger');
-            var instances = M.Dropdown.init(elems,);
-        });
-    </script>
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="JS/navbar.js"></script>
+
     <!-- <script src="crowdsourcing.js" type="text/javascript"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+        });
+    </script>
     <script type="text/javascript">
         top.visible_div_id = 'north';
 

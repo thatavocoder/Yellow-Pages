@@ -7,7 +7,8 @@ select{
 }
 
 .card-container{
-    margin-top: -3vmin !important;
+    position: relative;
+    margin-top: 16vmin !important;
     font-family: Poppins;
 }
 
@@ -30,7 +31,7 @@ select{
     line-height: 3.7vmin;
     font-size: 2.5vmin;
     font-family: Raleway !important;
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
     text-transform: capitalize !important;
     color: #50394c !important;
 }
@@ -73,7 +74,7 @@ select{
 }
 
 .pagebtn {
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
     width: 5vmin;
     margin-left: 0.5vmin;
     margin-right: 0.5vmin;
@@ -95,16 +96,16 @@ select{
     width: 13vmin;
     font-size: 2vmin;
     line-height: 5vmin;
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
     color: #50394c;
 }
 
 .searchbtn:hover{
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
 }
 
 .searchbtn:focus{
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
 }
 
 .modal {
@@ -121,7 +122,7 @@ select{
 }
 
 .modal-trigger{
-    color: #b2b2b2 !important;
+    color: #b5e1e2 !important;
 }
 
 .submitbtn{
@@ -129,18 +130,18 @@ select{
     width: 13vmin;
     font-size: 2vmin;
     line-height: 5vmin;
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
     color: #50394c;
 }
 
 .submitbtn:hover{
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
 }
 
 .submitbtn:focus{
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
 }
 
 .pagebtnactive{
-    background-color: #b2b2b2;
+    background-color: #b5e1e2;
 }

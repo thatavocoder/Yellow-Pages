@@ -24,6 +24,7 @@ nav {
     margin: 0 !important;
     padding: 0 !important;
     background-color: #ffef96e0 !important;
+    border-bottom: 0.1vmin solid #b1b1b1;
 }
 
 .tabs li{

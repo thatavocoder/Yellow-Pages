@@ -1,87 +1,105 @@
-
-.form {
-    padding-top: 100px;
-    padding-left: 50px;
-
+body {
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
 }
 
 .start {
-    
-    margin-bottom: 2vmin;
-    padding: 10px;
+    flex: 1 0 auto !important;
+}
+
+.start {
+    padding: 2vmin;
     text-align: center;
-    border: 2px solid black;
-    border-radius: 5px;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: 20 px black solid;
 }
 
 .start div {
     display: inline;
 }
 
-
-.south {
+.inform {
+    color: #50394c;
+    font-family: Raleway;
     text-align: center;
-    font-size: 19px;
-    color: black;
+    margin-top: 18vmin;
 }
 
-
-.north {
-    text-align: center;
-    font-size: 19px;
-    color: black;
+.optbtn {
+    height: 6vmin;
+    width: 20vmin;
+    margin-left: 2vmin;
+    margin-right: 2vmin;
+    font-size: 2vmin;
+    line-height: 6vmin;
+    background-color: #b5e1e2;
+    color: #50394c;
+    z-index: 0;
 }
 
-
-.east {
-    text-align: center;
-    font-size: 19px;
-    color: black;
+.optbtn:hover {
+    background-color: #b5e1e2;
 }
 
-
-.west {
-    text-align: center;
+.optbtn:focus {
+    background-color: #b5e1e2;
 }
 
-.forminput label {
-    color: black;
-    font-size:15px;
-}
-.inform{
-    color:black;
-    text-align:center;
-    margin-top: 14vmin;
-    padding: 10px;
-    
-}
-.drop{
-    background-color: #ffca00;
-    color:white;
-}
-
-.drop-btn:hover {
-    color: #ffca00;
-    border: 0.1vmin #ffca00;
-    color:white;
-    
-}
-
-.textarea {
-    width: 30%;
-    display: center;
-    /* padding: 1rem;
-    margin: 1rem; */
-    height: 10vh;
+.forminput{
+    width: 60%;
+    color: #50394c !important;
+    box-shadow: 0.3vmin 0.3vmin 1vmin rgb(223, 223, 223);
+    padding: 3vmin;
+    padding-left: 15vmin;
+    padding-right: 15vmin;
+    margin-top: 5vmin;
     position: relative;
-
+    left: 50%;
+    transform: translate(-50%);
 }
 
-.submit-btn{
-    background-color:  #ffca00;
-    color:white;
+.forminput h5, .forminput p{
+    text-align: center;
+    color: #50394c;
+}
+
+.forminput p{
+    margin-bottom: 5vmin;
+}
+
+.deetsname{
+    margin-bottom: 5vmin;
+}
+
+.forminput label{
+    font-weight: normal;
+}
+
+.submitbtn{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 5vmin;
+}
+
+input, textarea{
+    height: 6vmin !important;
+    font-size: 2.5vmin !important;
+}
+
+.input-field ul{
+    height: 60vmin;
+}
+
+
+@media only screen and (max-width: 768px){
+    .forminput{
+        width: 95%;
+        padding-left: 0vmin;
+        padding-right: 0vmin;
+        padding: 1vmin;
+    }
+    .optbtn{
+        margin-left: 0.5vmin;
+        margin-right: 0.5vmin;
+    }
 }
