@@ -74,12 +74,12 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     url = "https://yp-test-2-new.herokuapp.com/api/loans/filter/?"
     var filterVal = {
-        state: document.getElementById('state').value,
-        category: document.getElementById('category').value,
-        district: document.getElementById('district').value,
-        loan_amount: document.getElementById('loan_amount').value,
-        religion: document.getElementById('religion').value,
-        country: document.getElementById('country').value,
+        state: document.getElementById('states').value,
+        category: document.getElementById('categories').value,
+        district: document.getElementById('districts').value,
+        loan_amount: document.getElementById('loan_amounts').value,
+        religion: document.getElementById('religions').value,
+        country: document.getElementById('countries').value,
         interest: document.getElementById('interest').checked,
     }
     for (const property in filterVal) {
@@ -170,7 +170,7 @@ function createCard(resp) {
             cardcontent.appendChild(updt)
 
             if (resp.results[i].updated_on == null) {
-                updt.innerHTML = "Deadline : Information not available"
+                updt.innerHTML = "Updated on : Information not available"
                 cardcontent.appendChild(updt)
             }
 

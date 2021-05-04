@@ -68,11 +68,11 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     url = "https://yp-test-2-new.herokuapp.com/api/ngo/filter/?"
     var filterVal = {
-        state: document.getElementById('state').value,
-        category: document.getElementById('category').value,
-        stype: document.getElementById('type').value,
-        religion: document.getElementById('religion').value,
-        gender: document.getElementById('gender').value,
+        state: document.getElementById('states').value,
+        category: document.getElementById('categories').value,
+        stype: document.getElementById('types').value,
+        religion: document.getElementById('religions').value,
+        gender: document.getElementById('genders').value,
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {

@@ -56,9 +56,9 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     url = "https://yp-test-2-new.herokuapp.com/api/bookbanks/filter/?"
     var filterVal = {
-        state: document.getElementById('state').value,
-        district: document.getElementById('district').value,
-        books: document.getElementById('book').value
+        state: document.getElementById('states').value,
+        district: document.getElementById('districts').value,
+        books: document.getElementById('books').value
     }
     for (const property in filterVal) {
         if (filterVal[property] == '') {
