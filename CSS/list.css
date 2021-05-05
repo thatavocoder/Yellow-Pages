@@ -52,7 +52,7 @@ select{
     height: auto;
     padding: 0.5vmin !important;
     padding-left: 2vmin !important;
-    font-size: 2.5vmin;
+    font-size: 2.3vmin;
 }
 
 .cont2, .cont3 {
@@ -60,11 +60,16 @@ select{
     height: auto;
     padding: 0.5vmin;
     padding-left: 2vmin;
-    font-size: 2.5vmin;
+    font-size: 2.3vmin;
 }
 
 .card-action {
     text-align: center;
+    padding: 2vmin !important;
+}
+
+.card-action a{
+    font-size: 2.5vmin;
 }
 
 .pagination {
@@ -75,12 +80,15 @@ select{
 
 .pagebtn {
     background-color: #b5e1e2;
-    width: 5vmin;
     margin-left: 0.5vmin;
     margin-right: 0.5vmin;
     position: relative;
     left: 50%;
     transform: translate(-50%);
+}
+
+a.pageBtn{
+    width: 5vmin;
 }
 
 .pagebtn a{
@@ -123,6 +131,9 @@ select{
 
 .modal-trigger{
     color: #b5e1e2 !important;
+    font-size: 3vmin;
+    text-align: center;
+    margin: 0 !important;
 }
 
 .submitbtn{
@@ -144,4 +155,10 @@ select{
 
 .pagebtnactive{
     background-color: #b5e1e2;
+}
+
+@media only screen and (max-width: 768px) {
+    a.pageBtn{
+        width: 8vmin;
+    }
 }

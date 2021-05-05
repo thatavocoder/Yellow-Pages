@@ -24,6 +24,10 @@ body {
     margin-top: 18vmin;
 }
 
+.inform p{
+    font-family: Poppins;
+}
+
 .optbtn {
     height: 6vmin;
     width: 20vmin;
@@ -64,6 +68,7 @@ body {
 
 .forminput p{
     margin-bottom: 5vmin;
+    font-family: Poppins;
 }
 
 .deetsname{

@@ -86,7 +86,7 @@ function createCard(resp) {
         for (var i = 0; i <= resp.results.length - 1; i++) {
 
             var subcont = document.createElement('div')
-            subcont.setAttribute("class", "col s12 m12 l4")
+            subcont.setAttribute("class", "col s6 m6 l4")
             main.appendChild(subcont)
 
             var card = document.createElement('div')
