@@ -1,4 +1,4 @@
-var url = 'https://yp-test-2-new.herokuapp.com/api/ngo/active/?'
+var url = 'https://yellow-pages-backend.herokuapp.com/api/ngo/active/?'
 var scholarships;
 var page = 1
 var modal = document.querySelector('.modal')
@@ -25,7 +25,7 @@ async function getscholar(url, page = 1) {
 
 async function getfields(url) {
 
-    var filterFields = 'https://yp-test-2-new.herokuapp.com/api/ngo/filterFields/'
+    var filterFields = 'https://yellow-pages-backend.herokuapp.com/api/ngo/filterFields/'
     var fields = await fetch(filterFields)
     var b = await fields.json()
 
@@ -66,7 +66,7 @@ getfields()
 var form = document.getElementById("filterForm");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    url = "https://yp-test-2-new.herokuapp.com/api/ngo/filter/?"
+    url = "https://yellow-pages-backend.herokuapp.com/api/ngo/filter/?"
     var filterVal = {
         state: document.getElementById('states').value,
         category: document.getElementById('categories').value,
@@ -240,7 +240,7 @@ var search = document.getElementById("search");
 search.addEventListener('submit', (e) => {
     e.preventDefault();
     page = 1
-    url = "https://yp-test-2-new.herokuapp.com/api/ngo/search/?"
+    url = "https://yellow-pages-backend.herokuapp.com/api/ngo/search/?"
     var filterVal = {
         q: document.getElementById('search-elem').value,
     }
